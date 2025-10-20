@@ -1,0 +1,30 @@
+deal_id,account_number,account_name,account_category,statement_type,mapping_level_1,mapping_level_2,mapping_level_3,sort_order_l1,sort_order_l2,sort_order_l3
+DEAL_HL_001,1000,Cash - Operating,Asset,BS,Assets,Current Assets,Cash and Cash Equivalents,1,1,1
+DEAL_HL_001,1020,Accounts Receivable,Asset,BS,Assets,Current Assets,Accounts Receivable,1,1,2
+DEAL_HL_001,1050,Inventory,Asset,BS,Assets,Current Assets,Inventory,1,1,3
+DEAL_HL_001,1100,Prepaid Expenses,Asset,BS,Assets,Current Assets,Other Current Assets,1,1,4
+DEAL_HL_001,1500,Property Plant Equipment,Asset,BS,Assets,Non-Current Assets,Property Plant and Equipment,1,2,1
+DEAL_HL_001,1550,Accumulated Depreciation,Asset,BS,Assets,Non-Current Assets,Accumulated Depreciation,1,2,2
+DEAL_HL_001,2000,Accounts Payable,Liability,BS,Liabilities,Current Liabilities,Accounts Payable,2,1,1
+DEAL_HL_001,2100,Accrued Expenses,Liability,BS,Liabilities,Current Liabilities,Accrued Liabilities,2,1,2
+DEAL_HL_001,2200,Deferred Revenue,Liability,BS,Liabilities,Current Liabilities,Deferred Revenue,2,1,3
+DEAL_HL_001,2500,Long-term Debt,Liability,BS,Liabilities,Non-Current Liabilities,Long-term Debt,2,2,1
+DEAL_HL_001,3000,Owners Equity,Equity,BS,Equity,Shareholders Equity,Retained Earnings,3,1,1
+DEAL_HL_001,5000,Product Revenue,Revenue,IS,Revenue,Product Revenue,Manufacturing Products,1,1,1
+DEAL_HL_001,5100,Service Revenue,Revenue,IS,Revenue,Service Revenue,Maintenance and Support,1,2,1
+DEAL_HL_001,5200,License Revenue,Revenue,IS,Revenue,License Revenue,Software Licenses,1,3,1
+DEAL_HL_001,6000,Cost of Goods Sold - Materials,Expense,IS,Cost of Goods Sold,Direct Materials,Raw Materials and Components,2,1,1
+DEAL_HL_001,6100,Cost of Goods Sold - Labor,Expense,IS,Cost of Goods Sold,Direct Labor,Production Labor,2,2,1
+DEAL_HL_001,6200,Cost of Goods Sold - Overhead,Expense,IS,Cost of Goods Sold,Manufacturing Overhead,Factory Overhead,2,3,1
+DEAL_HL_001,7000,Salaries and Wages,Expense,IS,Operating Expenses,Personnel Costs,Salaries and Wages,3,1,1
+DEAL_HL_001,7100,Employee Benefits,Expense,IS,Operating Expenses,Personnel Costs,Employee Benefits,3,1,2
+DEAL_HL_001,7200,Rent Expense,Expense,IS,Operating Expenses,Facility Costs,Rent and Lease,3,2,1
+DEAL_HL_001,7300,Utilities,Expense,IS,Operating Expenses,Facility Costs,Utilities,3,2,2
+DEAL_HL_001,7400,Insurance,Expense,IS,Operating Expenses,Facility Costs,Insurance,3,2,3
+DEAL_HL_001,7500,Professional Fees,Expense,IS,Operating Expenses,Professional Services,Legal and Consulting,3,3,1
+DEAL_HL_001,7600,Marketing and Advertising,Expense,IS,Operating Expenses,Sales and Marketing,Marketing and Advertising,3,4,1
+DEAL_HL_001,7700,Travel and Entertainment,Expense,IS,Operating Expenses,Sales and Marketing,Travel and Entertainment,3,4,2
+DEAL_HL_001,7800,Depreciation Expense,Expense,IS,Operating Expenses,Depreciation and Amortization,Depreciation,3,5,1
+DEAL_HL_001,7900,IT and Software,Expense,IS,Operating Expenses,Technology,IT and Software,3,6,1
+DEAL_HL_001,8000,Office Supplies,Expense,IS,Operating Expenses,General and Administrative,Office Supplies,3,7,1
+DEAL_HL_001,8100,Bad Debt Expense,Expense,IS,Operating Expenses,General and Administrative,Bad Debt Expense,3,7,2

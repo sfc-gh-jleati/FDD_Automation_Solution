@@ -1,0 +1,697 @@
+deal_id,deal_name,entity,period_date,account_number,account_name,debit_amount,credit_amount,net_amount
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,1000,Cash - Operating,161563.29,0.00,161563.29
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,1020,Accounts Receivable,272265.17,0.00,272265.17
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,1050,Inventory,200239.49,0.00,200239.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,1100,Prepaid Expenses,14931.83,0.00,14931.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,1500,Property Plant Equipment,502303.94,0.00,502303.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,1550,Accumulated Depreciation,0.00,150709.82,-150709.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,2000,Accounts Payable,0.00,170001.21,-170001.21
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,2100,Accrued Expenses,0.00,55986.26,-55986.26
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,2200,Deferred Revenue,0.00,36273.77,-36273.77
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,2500,Long-term Debt,0.00,249663.19,-249663.19
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,5000,Product Revenue,0.00,1080717.40,-1080717.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,5100,Service Revenue,0.00,189665.76,-189665.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,5200,License Revenue,0.00,86329.15,-86329.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,6000,Cost of Goods Sold - Materials,535100.71,0.00,535100.71
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,6100,Cost of Goods Sold - Labor,202676.72,0.00,202676.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,6200,Cost of Goods Sold - Overhead,114931.12,0.00,114931.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7000,Salaries and Wages,144766.64,0.00,144766.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7100,Employee Benefits,42308.54,0.00,42308.54
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7300,Utilities,9838.18,0.00,9838.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7400,Insurance,15926.26,0.00,15926.26
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7500,Professional Fees,25436.68,0.00,25436.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7600,Marketing and Advertising,24786.57,0.00,24786.57
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7700,Travel and Entertainment,9860.76,0.00,9860.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7800,Depreciation Expense,12576.16,0.00,12576.16
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,7900,IT and Software,19445.67,0.00,19445.67
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,8000,Office Supplies,5508.62,0.00,5508.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,8100,Bad Debt Expense,8264.20,0.00,8264.20
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-01-31,3000,Owners Equity,0.00,331383.99,-331383.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,1000,Cash - Operating,159053.75,0.00,159053.75
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,1020,Accounts Receivable,263943.61,0.00,263943.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,1050,Inventory,239960.34,0.00,239960.34
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,1100,Prepaid Expenses,15413.43,0.00,15413.43
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,1500,Property Plant Equipment,499049.03,0.00,499049.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,1550,Accumulated Depreciation,0.00,150812.08,-150812.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,2000,Accounts Payable,0.00,180996.00,-180996.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,2100,Accrued Expenses,0.00,56747.84,-56747.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,2200,Deferred Revenue,0.00,36849.11,-36849.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,2500,Long-term Debt,0.00,248557.94,-248557.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,5000,Product Revenue,0.00,1127322.60,-1127322.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,5100,Service Revenue,0.00,165117.04,-165117.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,5200,License Revenue,0.00,94530.22,-94530.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,6000,Cost of Goods Sold - Materials,532142.83,0.00,532142.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,6100,Cost of Goods Sold - Labor,216593.82,0.00,216593.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,6200,Cost of Goods Sold - Overhead,112517.63,0.00,112517.63
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7000,Salaries and Wages,143825.07,0.00,143825.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7100,Employee Benefits,43048.90,0.00,43048.90
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7300,Utilities,9063.65,0.00,9063.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7400,Insurance,16063.20,0.00,16063.20
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7500,Professional Fees,28071.54,0.00,28071.54
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7600,Marketing and Advertising,20286.37,0.00,20286.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7700,Travel and Entertainment,16871.92,0.00,16871.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7800,Depreciation Expense,12484.08,0.00,12484.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,7900,IT and Software,17489.04,0.00,17489.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,8000,Office Supplies,6259.61,0.00,6259.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,8100,Bad Debt Expense,8248.08,0.00,8248.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-02-28,3000,Owners Equity,0.00,327453.07,-327453.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,1000,Cash - Operating,164152.69,0.00,164152.69
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,1020,Accounts Receivable,273884.34,0.00,273884.34
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,1050,Inventory,226422.21,0.00,226422.21
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,1100,Prepaid Expenses,15518.23,0.00,15518.23
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,1500,Property Plant Equipment,497072.03,0.00,497072.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,1550,Accumulated Depreciation,0.00,151229.47,-151229.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,2000,Accounts Payable,0.00,169388.32,-169388.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,2100,Accrued Expenses,0.00,54612.80,-54612.80
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,2200,Deferred Revenue,0.00,36331.44,-36331.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,2500,Long-term Debt,0.00,249113.07,-249113.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,5000,Product Revenue,0.00,1150460.25,-1150460.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,5100,Service Revenue,0.00,162552.49,-162552.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,5200,License Revenue,0.00,90114.39,-90114.39
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,6000,Cost of Goods Sold - Materials,573956.99,0.00,573956.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,6100,Cost of Goods Sold - Labor,216141.36,0.00,216141.36
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,6200,Cost of Goods Sold - Overhead,108048.63,0.00,108048.63
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7000,Salaries and Wages,146075.44,0.00,146075.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7100,Employee Benefits,42972.98,0.00,42972.98
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7300,Utilities,9743.69,0.00,9743.69
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7400,Insurance,16373.39,0.00,16373.39
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7500,Professional Fees,23635.52,0.00,23635.52
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7600,Marketing and Advertising,19021.41,0.00,19021.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7700,Travel and Entertainment,16601.02,0.00,16601.02
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7800,Depreciation Expense,12580.12,0.00,12580.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,7900,IT and Software,17459.72,0.00,17459.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,8000,Office Supplies,5902.40,0.00,5902.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,8100,Bad Debt Expense,8955.44,0.00,8955.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-03-31,3000,Owners Equity,0.00,358715.38,-358715.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,1000,Cash - Operating,143859.49,0.00,143859.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,1020,Accounts Receivable,270034.36,0.00,270034.36
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,1050,Inventory,237694.61,0.00,237694.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,1100,Prepaid Expenses,15285.52,0.00,15285.52
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,1500,Property Plant Equipment,502377.45,0.00,502377.45
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,1550,Accumulated Depreciation,0.00,152810.66,-152810.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,2000,Accounts Payable,0.00,196545.18,-196545.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,2100,Accrued Expenses,0.00,57948.23,-57948.23
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,2200,Deferred Revenue,0.00,36888.92,-36888.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,2500,Long-term Debt,0.00,249786.86,-249786.86
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,5000,Product Revenue,0.00,1280912.84,-1280912.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,5100,Service Revenue,0.00,200539.10,-200539.10
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,5200,License Revenue,0.00,114799.74,-114799.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,6000,Cost of Goods Sold - Materials,469820.57,0.00,469820.57
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,6100,Cost of Goods Sold - Labor,216294.10,0.00,216294.10
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,6200,Cost of Goods Sold - Overhead,107114.89,0.00,107114.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7000,Salaries and Wages,153225.25,0.00,153225.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7100,Employee Benefits,43004.70,0.00,43004.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7300,Utilities,9509.59,0.00,9509.59
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7400,Insurance,16395.69,0.00,16395.69
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7500,Professional Fees,26304.47,0.00,26304.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7600,Marketing and Advertising,28649.40,0.00,28649.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7700,Travel and Entertainment,17285.95,0.00,17285.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7800,Depreciation Expense,12839.25,0.00,12839.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,7900,IT and Software,17041.64,0.00,17041.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,8000,Office Supplies,5828.11,0.00,5828.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,8100,Bad Debt Expense,6516.58,0.00,6516.58
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-04-30,3000,Owners Equity,0.00,36850.09,-36850.09
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,1000,Cash - Operating,151705.66,0.00,151705.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,1020,Accounts Receivable,314968.46,0.00,314968.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,1050,Inventory,214620.34,0.00,214620.34
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,1100,Prepaid Expenses,15166.38,0.00,15166.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,1500,Property Plant Equipment,504192.58,0.00,504192.58
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,1550,Accumulated Depreciation,0.00,153827.66,-153827.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,2000,Accounts Payable,0.00,183218.12,-183218.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,2100,Accrued Expenses,0.00,54106.83,-54106.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,2200,Deferred Revenue,0.00,34314.69,-34314.69
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,2500,Long-term Debt,0.00,248397.53,-248397.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,5000,Product Revenue,0.00,1250173.33,-1250173.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,5100,Service Revenue,0.00,205078.13,-205078.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,5200,License Revenue,0.00,114909.00,-114909.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,6000,Cost of Goods Sold - Materials,620391.34,0.00,620391.34
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,6100,Cost of Goods Sold - Labor,240374.06,0.00,240374.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,6200,Cost of Goods Sold - Overhead,109985.81,0.00,109985.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7000,Salaries and Wages,151267.24,0.00,151267.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7100,Employee Benefits,44675.74,0.00,44675.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7300,Utilities,9238.03,0.00,9238.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7400,Insurance,16780.68,0.00,16780.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7500,Professional Fees,23150.94,0.00,23150.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7600,Marketing and Advertising,18956.26,0.00,18956.26
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7700,Travel and Entertainment,10325.37,0.00,10325.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7800,Depreciation Expense,12760.20,0.00,12760.20
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,7900,IT and Software,18163.46,0.00,18163.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,8000,Office Supplies,6619.24,0.00,6619.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,8100,Bad Debt Expense,7559.69,0.00,7559.69
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-05-31,3000,Owners Equity,0.00,274876.19,-274876.19
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,1000,Cash - Operating,158280.19,0.00,158280.19
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,1020,Accounts Receivable,288422.33,0.00,288422.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,1050,Inventory,215192.80,0.00,215192.80
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,1100,Prepaid Expenses,15635.66,0.00,15635.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,1500,Property Plant Equipment,503480.62,0.00,503480.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,1550,Accumulated Depreciation,0.00,154688.31,-154688.31
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,2000,Accounts Payable,0.00,179823.38,-179823.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,2100,Accrued Expenses,0.00,60066.35,-60066.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,2200,Deferred Revenue,0.00,35741.12,-35741.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,2500,Long-term Debt,0.00,248145.61,-248145.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,5000,Product Revenue,0.00,1357813.06,-1357813.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,5100,Service Revenue,0.00,173141.32,-173141.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,5200,License Revenue,0.00,93821.72,-93821.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,6000,Cost of Goods Sold - Materials,522312.44,0.00,522312.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,6100,Cost of Goods Sold - Labor,223213.54,0.00,223213.54
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,6200,Cost of Goods Sold - Overhead,122043.95,0.00,122043.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7000,Salaries and Wages,158891.92,0.00,158891.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7100,Employee Benefits,45454.05,0.00,45454.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7300,Utilities,10257.56,0.00,10257.56
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7400,Insurance,16442.66,0.00,16442.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7500,Professional Fees,27940.31,0.00,27940.31
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7600,Marketing and Advertising,22227.62,0.00,22227.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7700,Travel and Entertainment,14843.01,0.00,14843.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7800,Depreciation Expense,12785.60,0.00,12785.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,7900,IT and Software,19956.89,0.00,19956.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,8000,Office Supplies,6160.78,0.00,6160.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,8100,Bad Debt Expense,9572.11,0.00,9572.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-06-30,3000,Owners Equity,0.00,117873.17,-117873.17
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,1000,Cash - Operating,166738.33,0.00,166738.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,1020,Accounts Receivable,285068.71,0.00,285068.71
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,1050,Inventory,236476.92,0.00,236476.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,1100,Prepaid Expenses,15865.14,0.00,15865.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,1500,Property Plant Equipment,510820.16,0.00,510820.16
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,1550,Accumulated Depreciation,0.00,154743.53,-154743.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,2000,Accounts Payable,0.00,194147.41,-194147.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,2100,Accrued Expenses,0.00,57258.63,-57258.63
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,2200,Deferred Revenue,0.00,37896.04,-37896.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,2500,Long-term Debt,0.00,247339.18,-247339.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,5000,Product Revenue,0.00,1133592.07,-1133592.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,5100,Service Revenue,0.00,211517.35,-211517.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,5200,License Revenue,0.00,93817.02,-93817.02
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,6000,Cost of Goods Sold - Materials,575660.64,0.00,575660.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,6100,Cost of Goods Sold - Labor,228753.89,0.00,228753.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,6200,Cost of Goods Sold - Overhead,114373.11,0.00,114373.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7000,Salaries and Wages,157149.73,0.00,157149.73
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7100,Employee Benefits,45083.14,0.00,45083.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7300,Utilities,9568.04,0.00,9568.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7400,Insurance,16641.79,0.00,16641.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7500,Professional Fees,24806.81,0.00,24806.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7600,Marketing and Advertising,26306.85,0.00,26306.85
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7700,Travel and Entertainment,10992.06,0.00,10992.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7800,Depreciation Expense,12958.38,0.00,12958.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,7900,IT and Software,21504.05,0.00,21504.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,8000,Office Supplies,6669.40,0.00,6669.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,8100,Bad Debt Expense,7284.84,0.00,7284.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-07-31,3000,Owners Equity,0.00,370410.76,-370410.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,1000,Cash - Operating,168244.32,0.00,168244.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,1020,Accounts Receivable,307364.53,0.00,307364.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,1050,Inventory,224848.82,0.00,224848.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,1100,Prepaid Expenses,15776.50,0.00,15776.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,1500,Property Plant Equipment,508654.20,0.00,508654.20
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,1550,Accumulated Depreciation,0.00,156214.88,-156214.88
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,2000,Accounts Payable,0.00,186923.84,-186923.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,2100,Accrued Expenses,0.00,59586.66,-59586.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,2200,Deferred Revenue,0.00,35085.65,-35085.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,2500,Long-term Debt,0.00,248276.89,-248276.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,5000,Product Revenue,0.00,1281182.37,-1281182.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,5100,Service Revenue,0.00,204603.62,-204603.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,5200,License Revenue,0.00,108794.53,-108794.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,6000,Cost of Goods Sold - Materials,642844.62,0.00,642844.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,6100,Cost of Goods Sold - Labor,247117.85,0.00,247117.85
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,6200,Cost of Goods Sold - Overhead,105907.38,0.00,105907.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7000,Salaries and Wages,155949.97,0.00,155949.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7100,Employee Benefits,46110.17,0.00,46110.17
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7300,Utilities,9924.68,0.00,9924.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7400,Insurance,16733.56,0.00,16733.56
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7500,Professional Fees,20806.22,0.00,20806.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7600,Marketing and Advertising,31359.50,0.00,31359.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7700,Travel and Entertainment,15945.88,0.00,15945.88
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7800,Depreciation Expense,13139.00,0.00,13139.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,7900,IT and Software,19057.62,0.00,19057.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,8000,Office Supplies,6152.79,0.00,6152.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,8100,Bad Debt Expense,6859.79,0.00,6859.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-08-31,3000,Owners Equity,0.00,310128.96,-310128.96
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,1000,Cash - Operating,165969.25,0.00,165969.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,1020,Accounts Receivable,304442.41,0.00,304442.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,1050,Inventory,245288.99,0.00,245288.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,1100,Prepaid Expenses,16046.07,0.00,16046.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,1500,Property Plant Equipment,512435.91,0.00,512435.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,1550,Accumulated Depreciation,0.00,157024.57,-157024.57
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,2000,Accounts Payable,0.00,185368.68,-185368.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,2100,Accrued Expenses,0.00,56089.12,-56089.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,2200,Deferred Revenue,0.00,40509.91,-40509.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,2500,Long-term Debt,0.00,247761.71,-247761.71
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,5000,Product Revenue,0.00,1396298.25,-1396298.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,5100,Service Revenue,0.00,201448.36,-201448.36
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,5200,License Revenue,0.00,100307.62,-100307.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,6000,Cost of Goods Sold - Materials,628676.70,0.00,628676.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,6100,Cost of Goods Sold - Labor,253606.76,0.00,253606.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,6200,Cost of Goods Sold - Overhead,123508.17,0.00,123508.17
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7000,Salaries and Wages,158023.35,0.00,158023.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7100,Employee Benefits,46342.46,0.00,46342.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7300,Utilities,9673.35,0.00,9673.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7400,Insurance,17117.48,0.00,17117.48
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7500,Professional Fees,27533.46,0.00,27533.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7600,Marketing and Advertising,24105.38,0.00,24105.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7700,Travel and Entertainment,12327.13,0.00,12327.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7800,Depreciation Expense,12993.50,0.00,12993.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,7900,IT and Software,21595.46,0.00,21595.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,8000,Office Supplies,5889.38,0.00,5889.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,8100,Bad Debt Expense,7678.55,0.00,7678.55
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-09-30,3000,Owners Equity,0.00,236445.54,-236445.54
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,1000,Cash - Operating,151131.92,0.00,151131.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,1020,Accounts Receivable,304942.82,0.00,304942.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,1050,Inventory,229616.29,0.00,229616.29
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,1100,Prepaid Expenses,15670.14,0.00,15670.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,1500,Property Plant Equipment,512161.90,0.00,512161.90
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,1550,Accumulated Depreciation,0.00,157571.41,-157571.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,2000,Accounts Payable,0.00,182720.82,-182720.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,2100,Accrued Expenses,0.00,59085.40,-59085.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,2200,Deferred Revenue,0.00,39836.80,-39836.80
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,2500,Long-term Debt,0.00,246581.57,-246581.57
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,5000,Product Revenue,0.00,1134693.27,-1134693.27
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,5100,Service Revenue,0.00,215042.76,-215042.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,5200,License Revenue,0.00,118878.32,-118878.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,6000,Cost of Goods Sold - Materials,671838.84,0.00,671838.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,6100,Cost of Goods Sold - Labor,252567.12,0.00,252567.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,6200,Cost of Goods Sold - Overhead,116911.97,0.00,116911.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7000,Salaries and Wages,162573.87,0.00,162573.87
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7100,Employee Benefits,47178.42,0.00,47178.42
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7300,Utilities,10049.52,0.00,10049.52
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7400,Insurance,17483.15,0.00,17483.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7500,Professional Fees,28350.18,0.00,28350.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7600,Marketing and Advertising,20082.53,0.00,20082.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7700,Travel and Entertainment,9863.41,0.00,9863.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7800,Depreciation Expense,13106.15,0.00,13106.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,7900,IT and Software,19789.98,0.00,19789.98
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,8000,Office Supplies,6513.29,0.00,6513.29
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,8100,Bad Debt Expense,11182.53,0.00,11182.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-10-31,3000,Owners Equity,0.00,474603.68,-474603.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,1000,Cash - Operating,177030.99,0.00,177030.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,1020,Accounts Receivable,335374.25,0.00,335374.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,1050,Inventory,232933.69,0.00,232933.69
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,1100,Prepaid Expenses,15918.07,0.00,15918.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,1500,Property Plant Equipment,512857.42,0.00,512857.42
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,1550,Accumulated Depreciation,0.00,159335.24,-159335.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,2000,Accounts Payable,0.00,201366.48,-201366.48
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,2100,Accrued Expenses,0.00,62372.65,-62372.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,2200,Deferred Revenue,0.00,36698.67,-36698.67
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,2500,Long-term Debt,0.00,247305.15,-247305.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,5000,Product Revenue,0.00,1240872.74,-1240872.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,5100,Service Revenue,0.00,186896.85,-186896.85
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,5200,License Revenue,0.00,99750.96,-99750.96
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,6000,Cost of Goods Sold - Materials,513849.50,0.00,513849.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,6100,Cost of Goods Sold - Labor,227366.77,0.00,227366.77
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,6200,Cost of Goods Sold - Overhead,126459.60,0.00,126459.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7000,Salaries and Wages,160141.02,0.00,160141.02
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7100,Employee Benefits,46949.72,0.00,46949.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7300,Utilities,10070.78,0.00,10070.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7400,Insurance,17016.08,0.00,17016.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7500,Professional Fees,22185.62,0.00,22185.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7600,Marketing and Advertising,30757.83,0.00,30757.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7700,Travel and Entertainment,15557.05,0.00,15557.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7800,Depreciation Expense,13371.25,0.00,13371.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,7900,IT and Software,20168.30,0.00,20168.30
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,8000,Office Supplies,6080.14,0.00,6080.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,8100,Bad Debt Expense,7210.66,0.00,7210.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-11-30,3000,Owners Equity,0.00,284700.00,-284700.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,1000,Cash - Operating,178618.30,0.00,178618.30
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,1020,Accounts Receivable,348712.76,0.00,348712.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,1050,Inventory,220216.40,0.00,220216.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,1100,Prepaid Expenses,15950.46,0.00,15950.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,1500,Property Plant Equipment,515219.84,0.00,515219.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,1550,Accumulated Depreciation,0.00,160482.05,-160482.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,2000,Accounts Payable,0.00,201080.97,-201080.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,2100,Accrued Expenses,0.00,59012.49,-59012.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,2200,Deferred Revenue,0.00,37567.34,-37567.34
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,2500,Long-term Debt,0.00,247599.27,-247599.27
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,5000,Product Revenue,0.00,1463425.25,-1463425.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,5100,Service Revenue,0.00,216485.70,-216485.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,5200,License Revenue,0.00,107919.64,-107919.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,6000,Cost of Goods Sold - Materials,567570.44,0.00,567570.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,6100,Cost of Goods Sold - Labor,232791.41,0.00,232791.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,6200,Cost of Goods Sold - Overhead,114010.14,0.00,114010.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7000,Salaries and Wages,168625.30,0.00,168625.30
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7100,Employee Benefits,47860.43,0.00,47860.43
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7300,Utilities,9606.00,0.00,9606.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7400,Insurance,17201.61,0.00,17201.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7500,Professional Fees,27666.83,0.00,27666.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7600,Marketing and Advertising,28712.66,0.00,28712.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7700,Travel and Entertainment,17787.65,0.00,17787.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7800,Depreciation Expense,13320.96,0.00,13320.96
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,7900,IT and Software,21093.74,0.00,21093.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,8000,Office Supplies,6139.24,0.00,6139.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,8100,Bad Debt Expense,8390.81,0.00,8390.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2023-12-31,3000,Owners Equity,0.00,93922.27,-93922.27
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,1000,Cash - Operating,180326.31,0.00,180326.31
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,1020,Accounts Receivable,321759.65,0.00,321759.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,1050,Inventory,238152.41,0.00,238152.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,1100,Prepaid Expenses,15572.46,0.00,15572.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,1500,Property Plant Equipment,514507.22,0.00,514507.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,1550,Accumulated Depreciation,0.00,161895.55,-161895.55
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,2000,Accounts Payable,0.00,192159.04,-192159.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,2100,Accrued Expenses,0.00,58939.58,-58939.58
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,2200,Deferred Revenue,0.00,37451.93,-37451.93
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,2500,Long-term Debt,0.00,246611.03,-246611.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,5000,Product Revenue,0.00,1489384.70,-1489384.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,5100,Service Revenue,0.00,215782.59,-215782.59
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,5200,License Revenue,0.00,111572.99,-111572.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,6000,Cost of Goods Sold - Materials,661068.31,0.00,661068.31
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,6100,Cost of Goods Sold - Labor,243186.06,0.00,243186.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,6200,Cost of Goods Sold - Overhead,121920.39,0.00,121920.39
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7000,Salaries and Wages,162626.82,0.00,162626.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7100,Employee Benefits,46003.82,0.00,46003.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7300,Utilities,9646.01,0.00,9646.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7400,Insurance,17706.10,0.00,17706.10
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7500,Professional Fees,24001.45,0.00,24001.45
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7600,Marketing and Advertising,29020.78,0.00,29020.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7700,Travel and Entertainment,11115.47,0.00,11115.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7800,Depreciation Expense,13527.98,0.00,13527.98
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,7900,IT and Software,21073.08,0.00,21073.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,8000,Office Supplies,6641.66,0.00,6641.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,8100,Bad Debt Expense,8392.38,0.00,8392.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-01-31,3000,Owners Equity,0.00,160450.95,-160450.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,1000,Cash - Operating,180772.68,0.00,180772.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,1020,Accounts Receivable,339176.11,0.00,339176.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,1050,Inventory,237227.51,0.00,237227.51
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,1100,Prepaid Expenses,16093.32,0.00,16093.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,1500,Property Plant Equipment,514459.46,0.00,514459.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,1550,Accumulated Depreciation,0.00,161502.02,-161502.02
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,2000,Accounts Payable,0.00,199439.97,-199439.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,2100,Accrued Expenses,0.00,60102.94,-60102.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,2200,Deferred Revenue,0.00,38847.55,-38847.55
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,2500,Long-term Debt,0.00,247399.91,-247399.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,5000,Product Revenue,0.00,1409530.82,-1409530.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,5100,Service Revenue,0.00,215016.01,-215016.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,5200,License Revenue,0.00,118286.60,-118286.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,6000,Cost of Goods Sold - Materials,711449.73,0.00,711449.73
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,6100,Cost of Goods Sold - Labor,245061.68,0.00,245061.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,6200,Cost of Goods Sold - Overhead,132979.40,0.00,132979.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7000,Salaries and Wages,164555.12,0.00,164555.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7100,Employee Benefits,46990.79,0.00,46990.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7300,Utilities,9660.49,0.00,9660.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7400,Insurance,17592.97,0.00,17592.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7500,Professional Fees,23531.77,0.00,23531.77
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7600,Marketing and Advertising,24222.09,0.00,24222.09
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7700,Travel and Entertainment,15710.12,0.00,15710.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7800,Depreciation Expense,13592.79,0.00,13592.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,7900,IT and Software,20991.05,0.00,20991.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,8000,Office Supplies,6323.65,0.00,6323.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,8100,Bad Debt Expense,8794.03,0.00,8794.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-02-29,3000,Owners Equity,0.00,307058.94,-307058.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,1000,Cash - Operating,168953.12,0.00,168953.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,1020,Accounts Receivable,351944.27,0.00,351944.27
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,1050,Inventory,262961.08,0.00,262961.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,1100,Prepaid Expenses,16312.22,0.00,16312.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,1500,Property Plant Equipment,513548.50,0.00,513548.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,1550,Accumulated Depreciation,0.00,163206.61,-163206.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,2000,Accounts Payable,0.00,193449.97,-193449.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,2100,Accrued Expenses,0.00,60337.93,-60337.93
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,2200,Deferred Revenue,0.00,40186.07,-40186.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,2500,Long-term Debt,0.00,245611.35,-245611.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,5000,Product Revenue,0.00,1247238.74,-1247238.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,5100,Service Revenue,0.00,223006.78,-223006.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,5200,License Revenue,0.00,134543.19,-134543.19
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,6000,Cost of Goods Sold - Materials,619168.97,0.00,619168.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,6100,Cost of Goods Sold - Labor,242977.92,0.00,242977.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,6200,Cost of Goods Sold - Overhead,112611.60,0.00,112611.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7000,Salaries and Wages,166538.72,0.00,166538.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7100,Employee Benefits,48072.70,0.00,48072.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7300,Utilities,10726.46,0.00,10726.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7400,Insurance,17544.81,0.00,17544.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7500,Professional Fees,24888.59,0.00,24888.59
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7600,Marketing and Advertising,26090.11,0.00,26090.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7700,Travel and Entertainment,16817.12,0.00,16817.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7800,Depreciation Expense,13591.08,0.00,13591.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,7900,IT and Software,19821.18,0.00,19821.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,8000,Office Supplies,6195.22,0.00,6195.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,8100,Bad Debt Expense,8807.88,0.00,8807.88
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-03-31,3000,Owners Equity,0.00,367990.91,-367990.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,1000,Cash - Operating,163803.55,0.00,163803.55
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,1020,Accounts Receivable,343317.06,0.00,343317.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,1050,Inventory,237147.28,0.00,237147.28
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,1100,Prepaid Expenses,16553.95,0.00,16553.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,1500,Property Plant Equipment,515863.74,0.00,515863.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,1550,Accumulated Depreciation,0.00,163704.78,-163704.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,2000,Accounts Payable,0.00,198982.09,-198982.09
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,2100,Accrued Expenses,0.00,64438.61,-64438.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,2200,Deferred Revenue,0.00,43225.80,-43225.80
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,2500,Long-term Debt,0.00,246508.24,-246508.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,5000,Product Revenue,0.00,1334501.88,-1334501.88
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,5100,Service Revenue,0.00,227087.99,-227087.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,5200,License Revenue,0.00,142925.09,-142925.09
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,6000,Cost of Goods Sold - Materials,713106.87,0.00,713106.87
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,6100,Cost of Goods Sold - Labor,248559.79,0.00,248559.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,6200,Cost of Goods Sold - Overhead,128811.15,0.00,128811.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7000,Salaries and Wages,170505.37,0.00,170505.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7100,Employee Benefits,49196.29,0.00,49196.29
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7300,Utilities,10110.74,0.00,10110.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7400,Insurance,18387.64,0.00,18387.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7500,Professional Fees,25726.60,0.00,25726.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7600,Marketing and Advertising,33114.84,0.00,33114.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7700,Travel and Entertainment,11813.18,0.00,11813.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7800,Depreciation Expense,13622.07,0.00,13622.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,7900,IT and Software,24773.05,0.00,24773.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,8000,Office Supplies,6859.05,0.00,6859.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,8100,Bad Debt Expense,7913.73,0.00,7913.73
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-04-30,3000,Owners Equity,0.00,345811.47,-345811.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,1000,Cash - Operating,171662.56,0.00,171662.56
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,1020,Accounts Receivable,315382.67,0.00,315382.67
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,1050,Inventory,234842.22,0.00,234842.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,1100,Prepaid Expenses,16139.95,0.00,16139.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,1500,Property Plant Equipment,520909.09,0.00,520909.09
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,1550,Accumulated Depreciation,0.00,164390.01,-164390.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,2000,Accounts Payable,0.00,195074.57,-195074.57
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,2100,Accrued Expenses,0.00,61683.89,-61683.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,2200,Deferred Revenue,0.00,39959.96,-39959.96
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,2500,Long-term Debt,0.00,245277.38,-245277.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,5000,Product Revenue,0.00,1409543.89,-1409543.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,5100,Service Revenue,0.00,243446.42,-243446.42
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,5200,License Revenue,0.00,132561.37,-132561.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,6000,Cost of Goods Sold - Materials,597446.81,0.00,597446.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,6100,Cost of Goods Sold - Labor,262832.65,0.00,262832.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,6200,Cost of Goods Sold - Overhead,123464.92,0.00,123464.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7000,Salaries and Wages,179515.72,0.00,179515.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7100,Employee Benefits,47967.32,0.00,47967.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7300,Utilities,10152.36,0.00,10152.36
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7400,Insurance,18308.97,0.00,18308.97
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7500,Professional Fees,32078.03,0.00,32078.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7600,Marketing and Advertising,23477.23,0.00,23477.23
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7700,Travel and Entertainment,16964.82,0.00,16964.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7800,Depreciation Expense,13650.91,0.00,13650.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,7900,IT and Software,22904.21,0.00,22904.21
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,8000,Office Supplies,6287.47,0.00,6287.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,8100,Bad Debt Expense,7012.80,0.00,7012.80
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-05-31,3000,Owners Equity,0.00,157063.22,-157063.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,1000,Cash - Operating,186326.54,0.00,186326.54
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,1020,Accounts Receivable,342759.60,0.00,342759.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,1050,Inventory,237555.56,0.00,237555.56
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,1100,Prepaid Expenses,16183.75,0.00,16183.75
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,1500,Property Plant Equipment,519357.93,0.00,519357.93
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,1550,Accumulated Depreciation,0.00,165296.72,-165296.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,2000,Accounts Payable,0.00,206982.26,-206982.26
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,2100,Accrued Expenses,0.00,63323.67,-63323.67
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,2200,Deferred Revenue,0.00,41467.64,-41467.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,2500,Long-term Debt,0.00,246929.92,-246929.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,5000,Product Revenue,0.00,1268024.13,-1268024.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,5100,Service Revenue,0.00,209715.44,-209715.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,5200,License Revenue,0.00,120105.21,-120105.21
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,6000,Cost of Goods Sold - Materials,664336.56,0.00,664336.56
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,6100,Cost of Goods Sold - Labor,283766.67,0.00,283766.67
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,6200,Cost of Goods Sold - Overhead,119877.14,0.00,119877.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7000,Salaries and Wages,169864.71,0.00,169864.71
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7100,Employee Benefits,48512.21,0.00,48512.21
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7300,Utilities,9971.49,0.00,9971.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7400,Insurance,18396.78,0.00,18396.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7500,Professional Fees,22590.18,0.00,22590.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7600,Marketing and Advertising,32553.94,0.00,32553.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7700,Travel and Entertainment,15097.82,0.00,15097.82
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7800,Depreciation Expense,13892.68,0.00,13892.68
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,7900,IT and Software,25356.59,0.00,25356.59
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,8000,Office Supplies,6232.90,0.00,6232.90
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,8100,Bad Debt Expense,12643.27,0.00,12643.27
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-06-30,3000,Owners Equity,0.00,451431.33,-451431.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,1000,Cash - Operating,180734.41,0.00,180734.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,1020,Accounts Receivable,380135.33,0.00,380135.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,1050,Inventory,274426.91,0.00,274426.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,1100,Prepaid Expenses,16526.07,0.00,16526.07
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,1500,Property Plant Equipment,517687.40,0.00,517687.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,1550,Accumulated Depreciation,0.00,167409.50,-167409.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,2000,Accounts Payable,0.00,195391.26,-195391.26
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,2100,Accrued Expenses,0.00,65172.90,-65172.90
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,2200,Deferred Revenue,0.00,40058.47,-40058.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,2500,Long-term Debt,0.00,245489.06,-245489.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,5000,Product Revenue,0.00,1521578.81,-1521578.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,5100,Service Revenue,0.00,236505.74,-236505.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,5200,License Revenue,0.00,144870.72,-144870.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,6000,Cost of Goods Sold - Materials,749129.35,0.00,749129.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,6100,Cost of Goods Sold - Labor,285190.76,0.00,285190.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,6200,Cost of Goods Sold - Overhead,137740.75,0.00,137740.75
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7000,Salaries and Wages,174907.38,0.00,174907.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7100,Employee Benefits,49074.72,0.00,49074.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7300,Utilities,10398.67,0.00,10398.67
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7400,Insurance,18156.90,0.00,18156.90
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7500,Professional Fees,28852.06,0.00,28852.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7600,Marketing and Advertising,36486.00,0.00,36486.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7700,Travel and Entertainment,11863.25,0.00,11863.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7800,Depreciation Expense,13939.91,0.00,13939.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,7900,IT and Software,23004.35,0.00,23004.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,8000,Office Supplies,6377.99,0.00,6377.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,8100,Bad Debt Expense,7367.08,0.00,7367.08
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-07-31,3000,Owners Equity,0.00,333522.83,-333522.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,1000,Cash - Operating,189033.66,0.00,189033.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,1020,Accounts Receivable,365705.62,0.00,365705.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,1050,Inventory,257842.23,0.00,257842.23
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,1100,Prepaid Expenses,16462.15,0.00,16462.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,1500,Property Plant Equipment,517143.71,0.00,517143.71
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,1550,Accumulated Depreciation,0.00,167312.36,-167312.36
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,2000,Accounts Payable,0.00,212598.04,-212598.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,2100,Accrued Expenses,0.00,66053.13,-66053.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,2200,Deferred Revenue,0.00,41042.39,-41042.39
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,2500,Long-term Debt,0.00,246158.72,-246158.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,5000,Product Revenue,0.00,1674475.01,-1674475.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,5100,Service Revenue,0.00,239468.92,-239468.92
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,5200,License Revenue,0.00,144921.66,-144921.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,6000,Cost of Goods Sold - Materials,595936.41,0.00,595936.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,6100,Cost of Goods Sold - Labor,290759.72,0.00,290759.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,6200,Cost of Goods Sold - Overhead,134734.38,0.00,134734.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7000,Salaries and Wages,174051.32,0.00,174051.32
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7100,Employee Benefits,52199.02,0.00,52199.02
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7300,Utilities,10575.13,0.00,10575.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7400,Insurance,18773.78,0.00,18773.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7500,Professional Fees,27935.40,0.00,27935.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7600,Marketing and Advertising,38241.62,0.00,38241.62
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7700,Travel and Entertainment,17500.65,0.00,17500.65
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7800,Depreciation Expense,14137.71,0.00,14137.71
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,7900,IT and Software,21210.00,0.00,21210.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,8000,Office Supplies,6437.05,0.00,6437.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,8100,Bad Debt Expense,11657.80,0.00,11657.80
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-08-31,3000,Owners Equity,0.00,-3692.87,3692.87
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,1000,Cash - Operating,183125.88,0.00,183125.88
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,1020,Accounts Receivable,373978.25,0.00,373978.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,1050,Inventory,268264.78,0.00,268264.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,1100,Prepaid Expenses,16476.10,0.00,16476.10
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,1500,Property Plant Equipment,521477.94,0.00,521477.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,1550,Accumulated Depreciation,0.00,168494.11,-168494.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,2000,Accounts Payable,0.00,228566.24,-228566.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,2100,Accrued Expenses,0.00,63779.04,-63779.04
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,2200,Deferred Revenue,0.00,45189.18,-45189.18
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,2500,Long-term Debt,0.00,244517.03,-244517.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,5000,Product Revenue,0.00,1404333.36,-1404333.36
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,5100,Service Revenue,0.00,248073.21,-248073.21
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,5200,License Revenue,0.00,147095.76,-147095.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,6000,Cost of Goods Sold - Materials,746875.95,0.00,746875.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,6100,Cost of Goods Sold - Labor,298412.16,0.00,298412.16
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,6200,Cost of Goods Sold - Overhead,131641.77,0.00,131641.77
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7000,Salaries and Wages,174225.41,0.00,174225.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7100,Employee Benefits,51865.66,0.00,51865.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7300,Utilities,9884.31,0.00,9884.31
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7400,Insurance,18411.52,0.00,18411.52
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7500,Professional Fees,28535.98,0.00,28535.98
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7600,Marketing and Advertising,26229.00,0.00,26229.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7700,Travel and Entertainment,12412.42,0.00,12412.42
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7800,Depreciation Expense,14069.00,0.00,14069.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,7900,IT and Software,24837.99,0.00,24837.99
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,8000,Office Supplies,7055.89,0.00,7055.89
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,8100,Bad Debt Expense,10239.35,0.00,10239.35
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-09-30,3000,Owners Equity,0.00,395971.43,-395971.43
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,1000,Cash - Operating,183904.33,0.00,183904.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,1020,Accounts Receivable,391178.39,0.00,391178.39
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,1050,Inventory,265560.49,0.00,265560.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,1100,Prepaid Expenses,16910.37,0.00,16910.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,1500,Property Plant Equipment,517592.14,0.00,517592.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,1550,Accumulated Depreciation,0.00,169759.94,-169759.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,2000,Accounts Payable,0.00,222516.31,-222516.31
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,2100,Accrued Expenses,0.00,64396.53,-64396.53
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,2200,Deferred Revenue,0.00,41655.00,-41655.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,2500,Long-term Debt,0.00,244209.23,-244209.23
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,5000,Product Revenue,0.00,1569368.42,-1569368.42
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,5100,Service Revenue,0.00,239897.01,-239897.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,5200,License Revenue,0.00,161163.94,-161163.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,6000,Cost of Goods Sold - Materials,681162.66,0.00,681162.66
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,6100,Cost of Goods Sold - Labor,265137.37,0.00,265137.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,6200,Cost of Goods Sold - Overhead,123906.24,0.00,123906.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7000,Salaries and Wages,182372.86,0.00,182372.86
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7100,Employee Benefits,53142.64,0.00,53142.64
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7300,Utilities,9920.49,0.00,9920.49
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7400,Insurance,18772.33,0.00,18772.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7500,Professional Fees,28547.15,0.00,28547.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7600,Marketing and Advertising,36210.45,0.00,36210.45
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7700,Travel and Entertainment,13228.61,0.00,13228.61
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7800,Depreciation Expense,14193.44,0.00,14193.44
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,7900,IT and Software,26610.95,0.00,26610.95
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,8000,Office Supplies,7282.24,0.00,7282.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,8100,Bad Debt Expense,8425.56,0.00,8425.56
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-10-31,3000,Owners Equity,0.00,159092.33,-159092.33
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,1000,Cash - Operating,179141.13,0.00,179141.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,1020,Accounts Receivable,361250.06,0.00,361250.06
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,1050,Inventory,260106.83,0.00,260106.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,1100,Prepaid Expenses,17214.76,0.00,17214.76
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,1500,Property Plant Equipment,523605.34,0.00,523605.34
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,1550,Accumulated Depreciation,0.00,170638.13,-170638.13
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,2000,Accounts Payable,0.00,218380.11,-218380.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,2100,Accrued Expenses,0.00,67734.14,-67734.14
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,2200,Deferred Revenue,0.00,44856.91,-44856.91
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,2500,Long-term Debt,0.00,244509.02,-244509.02
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,5000,Product Revenue,0.00,1573998.12,-1573998.12
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,5100,Service Revenue,0.00,261317.40,-261317.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,5200,License Revenue,0.00,155137.73,-155137.73
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,6000,Cost of Goods Sold - Materials,719923.25,0.00,719923.25
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,6100,Cost of Goods Sold - Labor,280830.78,0.00,280830.78
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,6200,Cost of Goods Sold - Overhead,126726.39,0.00,126726.39
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7000,Salaries and Wages,188329.84,0.00,188329.84
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7100,Employee Benefits,52680.72,0.00,52680.72
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7300,Utilities,10820.41,0.00,10820.41
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7400,Insurance,19323.11,0.00,19323.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7500,Professional Fees,23604.70,0.00,23604.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7600,Marketing and Advertising,39024.47,0.00,39024.47
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7700,Travel and Entertainment,15841.03,0.00,15841.03
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7800,Depreciation Expense,14272.15,0.00,14272.15
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,7900,IT and Software,22314.63,0.00,22314.63
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,8000,Office Supplies,6489.10,0.00,6489.10
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,8100,Bad Debt Expense,12857.79,0.00,12857.79
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-11-30,3000,Owners Equity,0.00,165784.93,-165784.93
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,1000,Cash - Operating,181516.81,0.00,181516.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,1020,Accounts Receivable,401575.60,0.00,401575.60
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,1050,Inventory,273906.94,0.00,273906.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,1100,Prepaid Expenses,17171.74,0.00,17171.74
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,1500,Property Plant Equipment,528682.24,0.00,528682.24
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,1550,Accumulated Depreciation,0.00,172849.50,-172849.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,2000,Accounts Payable,0.00,207162.20,-207162.20
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,2100,Accrued Expenses,0.00,63186.81,-63186.81
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,2200,Deferred Revenue,0.00,41783.11,-41783.11
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,2500,Long-term Debt,0.00,244648.46,-244648.46
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,5000,Product Revenue,0.00,1451633.20,-1451633.20
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,5100,Service Revenue,0.00,217949.50,-217949.50
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,5200,License Revenue,0.00,149558.37,-149558.37
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,6000,Cost of Goods Sold - Materials,695466.83,0.00,695466.83
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,6100,Cost of Goods Sold - Labor,316184.70,0.00,316184.70
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,6200,Cost of Goods Sold - Overhead,147839.22,0.00,147839.22
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7000,Salaries and Wages,186454.75,0.00,186454.75
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7100,Employee Benefits,54020.75,0.00,54020.75
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7200,Rent Expense,28000.00,0.00,28000.00
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7300,Utilities,10652.01,0.00,10652.01
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7400,Insurance,19275.45,0.00,19275.45
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7500,Professional Fees,26204.94,0.00,26204.94
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7600,Marketing and Advertising,29944.05,0.00,29944.05
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7700,Travel and Entertainment,12112.38,0.00,12112.38
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7800,Depreciation Expense,14404.29,0.00,14404.29
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,7900,IT and Software,27827.40,0.00,27827.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,8000,Office Supplies,6722.40,0.00,6722.40
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,8100,Bad Debt Expense,10709.42,0.00,10709.42
+DEAL_HL_001,TechCo Manufacturing Inc,TechCo Corp,2024-12-31,3000,Owners Equity,0.00,439900.77,-439900.77
