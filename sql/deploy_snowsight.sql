@@ -2445,5 +2445,21 @@ SELECT
 -- Display configuration summary
 SELECT * FROM v_system_config;
 
+-- ============================================================================
+-- STEP 11: STREAMLIT ADMIN DASHBOARD (OPTIONAL)
+-- ============================================================================
+
+-- Create stage for Streamlit files
+CREATE STAGE IF NOT EXISTS streamlit_stage
+    COMMENT = 'Stage for Streamlit admin dashboard files';
+
+SELECT 'Streamlit stage created. See streamlit/deploy_streamlit.sql for dashboard deployment.' AS streamlit_status;
+
+-- Note: Streamlit app deployment requires uploading Python files to the stage
+-- This cannot be done in Snowsight - use SnowSQL or Snowsight UI file upload
+-- See streamlit/deploy_streamlit.sql for complete instructions
+
 SELECT 'Deployment completed successfully! Next steps: Upload sample data to @fdd_input_stage, then CALL run_complete_poc();' AS next_steps;
+
+SELECT 'OPTIONAL: Deploy Streamlit admin dashboard - see streamlit/deploy_streamlit.sql' AS optional_step;
 

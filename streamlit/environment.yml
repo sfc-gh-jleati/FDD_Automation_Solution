@@ -1,0 +1,9 @@
+name: fdd_admin_env
+channels:
+  - snowflake
+dependencies:
+  - streamlit
+  - pandas
+  - plotly
+  - numpy
+

@@ -15,6 +15,7 @@ This solution automates the generation of Financial Due Diligence (FDD) schedule
 - **Data Quality Validation**: Comprehensive checks for trial balance integrity
 - **Audit Trail**: Complete tracking of all data loads and transformations
 - **Excel Integration**: Exports CSV files formatted for direct Excel import with SUMIF formula compatibility
+- **🆕 Admin Dashboard**: Streamlit-based web UI for monitoring, configuration, and management
 
 ### Business Value
 
@@ -77,6 +78,16 @@ snowsql -c your_connection
 
 Expected output: All checks show ✅ PASS
 
+### Optional: Deploy Admin Dashboard (Streamlit)
+
+```sql
+-- See streamlit/README.md for complete instructions
+-- Upload files to @streamlit_stage via Snowsight UI, then:
+!source streamlit/deploy_streamlit.sql
+```
+
+Access via: **Projects → Streamlit → FDD Automation Admin Dashboard**
+
 ---
 
 ## 📂 Repository Structure
@@ -84,7 +95,10 @@ Expected output: All checks show ✅ PASS
 ```
 production/
 ├── README.md                           # This file
+├── HANDOFF_CHECKLIST.md                # Client acceptance checklist
 ├── HANDOFF.md                          # Detailed handoff documentation
+├── PRODUCTION_TEST_RESULTS.md          # Final validation results
+├── REPOSITORY_STATUS.md                # Production readiness status
 ├── REFACTORING_SUMMARY.md              # Technical improvements made
 │
 ├── sql/                                # Snowflake SQL scripts
@@ -97,6 +111,13 @@ production/
 │   ├── 04_schedule_generation.sql      # Schedule creation procedures
 │   ├── 05_ai_and_export.sql            # AI insights and CSV export
 │   └── README.md                       # SQL deployment guide
+│
+├── streamlit/                          # 🆕 Admin Dashboard (Streamlit)
+│   ├── fdd_admin_dashboard.py          # Main dashboard application
+│   ├── environment.yml                 # Python dependencies
+│   ├── deploy_streamlit.sql            # Streamlit deployment script
+│   ├── README.md                       # Dashboard documentation
+│   └── SNOWSIGHT_DEPLOYMENT_GUIDE.md   # UI deployment guide
 │
 ├── docs/                               # User documentation
 │   ├── DEPLOYMENT_GUIDE.md             # Step-by-step deployment instructions
@@ -154,6 +175,27 @@ CALL generate_fdd_schedules('DEAL_ID');
 | `income_statement_DEAL_ID.csv` | IS structure with formatting | ~1 KB | Income Statement |
 | `balance_sheet_DEAL_ID.csv` | BS structure with formatting | ~700 B | Balance Sheet |
 | `ai_insights_DEAL_ID.csv` | AI-generated variance analysis | ~12 KB | AI Insights |
+
+---
+
+## 🆕 Admin Dashboard (Streamlit)
+
+**New Feature:** A comprehensive web-based admin interface for managing the FDD automation solution.
+
+### Dashboard Capabilities
+
+- **📊 Real-time Monitoring**: Track procedure executions, performance metrics, and system health
+- **⚙️ Configuration Management**: Update system parameters without writing SQL
+- **🎯 AI Threshold Tuning**: Adjust variance thresholds with live impact preview
+- **✅ Data Quality Monitoring**: View validation results and failed checks
+- **📁 Stage File Management**: Browse and manage input/output files
+- **📜 Audit Log Viewer**: Filter and export execution history
+- **🚨 Error Diagnostics**: Analyze errors with trend charts and details
+- **🧪 System Health Check**: One-click validation of all components
+
+**Access:** `Projects → Streamlit → FDD Automation Admin Dashboard`
+
+**Deployment:** See `streamlit/README.md` for deployment instructions
 
 ---
 
