@@ -1191,6 +1191,16 @@ BEGIN
     
     rows_loaded := SQLROWCOUNT;
     
+    -- CRITICAL FIX: Set is_active = TRUE for all loaded mappings
+    -- The CSV doesn't include this column, so it defaults to NULL
+    -- The view filters on is_active = TRUE, so NULL values are excluded
+    IF (:deal_id_filter IS NULL) THEN
+        UPDATE account_mappings SET is_active = TRUE WHERE is_active IS NULL;
+    ELSE
+        UPDATE account_mappings SET is_active = TRUE 
+        WHERE deal_id = :deal_id_filter AND is_active IS NULL;
+    END IF;
+    
     -- VALIDATION: Check for unmapped accounts in trial balance
     SELECT COUNT(DISTINCT t.account_number)
     INTO :unmapped_count
