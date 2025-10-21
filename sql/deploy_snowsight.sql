@@ -1053,18 +1053,21 @@ BEGIN
     );
     
     -- Log data quality check (using SELECT to support OBJECT_CONSTRUCT)
-    INSERT INTO data_quality_checks (deal_id, check_name, check_type, passed, actual_value, severity, message)
-    SELECT 
-        :deal_id_filter,
-        'Trial Balance Balancing',
-        'BALANCE',
-        :unbalanced_count = 0,
-        OBJECT_CONSTRUCT('unbalanced_periods', :unbalanced_count, 'max_imbalance', :max_imbalance),
-        CASE WHEN :unbalanced_count = 0 THEN 'INFO' ELSE 'WARNING' END,
-        CASE 
-            WHEN :unbalanced_count = 0 THEN 'All periods balanced (debits = credits)'
-            ELSE :unbalanced_count || ' periods out of balance. Max imbalance: $' || ROUND(:max_imbalance, 2)
-        END;
+    -- Only log if deal_id is provided
+    IF (:deal_id_filter IS NOT NULL) THEN
+        INSERT INTO data_quality_checks (deal_id, check_name, check_type, passed, actual_value, severity, message)
+        SELECT 
+            :deal_id_filter,
+            'Trial Balance Balancing',
+            'BALANCE',
+            :unbalanced_count = 0,
+            OBJECT_CONSTRUCT('unbalanced_periods', :unbalanced_count, 'max_imbalance', :max_imbalance),
+            CASE WHEN :unbalanced_count = 0 THEN 'INFO' ELSE 'WARNING' END,
+            CASE 
+                WHEN :unbalanced_count = 0 THEN 'All periods balanced (debits = credits)'
+                ELSE :unbalanced_count || ' periods out of balance. Max imbalance: $' || ROUND(:max_imbalance, 2)
+            END;
+    END IF;
     
     COMMIT;
     
@@ -1198,18 +1201,21 @@ BEGIN
     AND t.deal_id = COALESCE(:deal_id_filter, t.deal_id);
     
     -- Log validation result (using SELECT to support OBJECT_CONSTRUCT)
-    INSERT INTO data_quality_checks (deal_id, check_name, check_type, passed, actual_value, severity, message)
-    SELECT
-        :deal_id_filter,
-        'Account Mapping Completeness',
-        'COMPLETENESS',
-        :unmapped_count = 0,
-        OBJECT_CONSTRUCT('unmapped_accounts', :unmapped_count),
-        CASE WHEN :unmapped_count = 0 THEN 'INFO' WHEN :unmapped_count < 5 THEN 'WARNING' ELSE 'ERROR' END,
-        CASE 
-            WHEN :unmapped_count = 0 THEN 'All accounts have mappings'
-            ELSE :unmapped_count || ' accounts missing mappings'
-        END;
+    -- Only log if deal_id is provided
+    IF (:deal_id_filter IS NOT NULL) THEN
+        INSERT INTO data_quality_checks (deal_id, check_name, check_type, passed, actual_value, severity, message)
+        SELECT
+            :deal_id_filter,
+            'Account Mapping Completeness',
+            'COMPLETENESS',
+            :unmapped_count = 0,
+            OBJECT_CONSTRUCT('unmapped_accounts', :unmapped_count),
+            CASE WHEN :unmapped_count = 0 THEN 'INFO' WHEN :unmapped_count < 5 THEN 'WARNING' ELSE 'ERROR' END,
+            CASE 
+                WHEN :unmapped_count = 0 THEN 'All accounts have mappings'
+                ELSE :unmapped_count || ' accounts missing mappings'
+            END;
+    END IF;
     
     IF (:unmapped_count > 0) THEN
         -- Log unmapped accounts as errors
