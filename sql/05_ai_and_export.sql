@@ -119,14 +119,14 @@ BEGIN
         -- Generate AI analysis if we have data
         IF (:margin_data IS NOT NULL) THEN
             SELECT SNOWFLAKE.CORTEX.COMPLETE(
-                get_config_string('ai_model_trends'),
+                'mistral-large',
                 'Analyze the following gross margin trend over 24 months for a company undergoing due diligence: ' ||
                 :margin_data ||
                 '. Identify any concerning trends, seasonality patterns, or margin compression/expansion. Provide 3 specific questions for management in 150 words.'
             ) INTO :margin_analysis;
             
             INSERT INTO ai_insights (deal_id, insight_type, severity, insight_text, model_used)
-            VALUES (:deal_id_param, 'trend_analysis', 'medium', :margin_analysis, get_config_string('ai_model_trends'));
+            VALUES (:deal_id_param, 'trend_analysis', 'medium', :margin_analysis, 'mistral-large');
             
             insight_count := :insight_count + 1;
         END IF;
