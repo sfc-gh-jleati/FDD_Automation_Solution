@@ -2149,6 +2149,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
     error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     safe_deal_id := sanitize_deal_id(:deal_id_param);
