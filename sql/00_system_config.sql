@@ -82,11 +82,11 @@ $$;
 
 -- Helper function to get config value as number
 CREATE OR REPLACE FUNCTION get_config_number(key_name VARCHAR)
-RETURNS NUMBER
+RETURNS FLOAT
 LANGUAGE SQL
 AS
 $$
-    SELECT config_value::NUMBER FROM system_config WHERE config_key = key_name
+    SELECT config_value::FLOAT FROM system_config WHERE config_key = key_name
 $$;
 
 -- Helper function to get config value as boolean
