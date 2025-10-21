@@ -1994,7 +1994,7 @@ BEGIN
     -- Export using EXECUTE IMMEDIATE (COPY INTO doesn't support variable paths)
     copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT * FROM v_database_tab_pivoted WHERE deal_id = ''' || :safe_deal_id || ''') ' ||
-                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'' COMPRESSION = NONE) ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
     
     EXECUTE IMMEDIATE :copy_sql;
@@ -2055,7 +2055,7 @@ BEGIN
     
     copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT row_num, row_label, row_type, account_filter, row_format_json FROM temp_is_schedule ORDER BY row_num) ' ||
-                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'' COMPRESSION = NONE) ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
     
     EXECUTE IMMEDIATE :copy_sql;
@@ -2113,7 +2113,7 @@ BEGIN
     
     copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT row_num, row_label, row_type, account_filter, row_format_json FROM temp_bs_schedule ORDER BY row_num) ' ||
-                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'' COMPRESSION = NONE) ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
     
     EXECUTE IMMEDIATE :copy_sql;
@@ -2173,7 +2173,7 @@ BEGIN
                     ' TO_CHAR(period_date, ''Mon YYYY'') AS period, metric_value, comparison_value, variance_pct, ' ||
                     ' insight_text, suggested_question, model_used FROM ai_insights WHERE deal_id = ''' || :safe_deal_id || ''' ' ||
                     ' ORDER BY CASE severity WHEN ''high'' THEN 1 WHEN ''medium'' THEN 2 ELSE 3 END, ABS(variance_pct) DESC) ' ||
-                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'' COMPRESSION = NONE) ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
     
     EXECUTE IMMEDIATE :copy_sql;
