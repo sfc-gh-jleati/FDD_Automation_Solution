@@ -960,6 +960,7 @@ DECLARE
     max_imbalance NUMBER DEFAULT 0;
     stage_path VARCHAR;
     result_cursor RESULTSET;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Log start
     INSERT INTO audit_log (log_id, procedure_name, deal_id, start_time, status, message)
@@ -1092,6 +1093,9 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        -- Capture error message (SQLERRM cannot be used directly in SELECT)
+        error_msg := SQLERRM;
+        
         ROLLBACK;
         
         -- Log error
@@ -1099,7 +1103,7 @@ EXCEPTION
         SET end_time = CURRENT_TIMESTAMP(),
             duration_seconds = DATEDIFF(second, :start_time_var, CURRENT_TIMESTAMP()),
             status = 'ERROR',
-            error_message = 'FATAL: ' || SQLERRM,
+            error_message = 'FATAL: ' || :error_msg,
             rows_affected = :rows_loaded
         WHERE log_id = :log_id_var;
         
@@ -1107,7 +1111,7 @@ EXCEPTION
             SELECT 'ERROR' AS status, 
                    0 AS rows_loaded, 
                    0 AS errors_found,
-                   'FATAL ERROR: ' || SQLERRM AS message
+                   'FATAL ERROR: ' || :error_msg AS message
         );
         RETURN TABLE(result_cursor);
 END;
@@ -1143,6 +1147,7 @@ DECLARE
     unmapped_count NUMBER DEFAULT 0;
     stage_path VARCHAR;
     result_cursor RESULTSET;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate deal_id if provided
     IF (:deal_id_filter IS NOT NULL AND NOT validate_deal_id(:deal_id_filter)) THEN
@@ -1252,17 +1257,20 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        -- Capture error message (SQLERRM cannot be used directly in SELECT)
+        error_msg := SQLERRM;
+        
         ROLLBACK;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
         result_cursor := (
             SELECT 'ERROR' AS status, 0 AS rows_loaded, 
-                   'FATAL ERROR: ' || SQLERRM AS message
+                   'FATAL ERROR: ' || :error_msg AS message
         );
         RETURN TABLE(result_cursor);
 END;
