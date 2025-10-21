@@ -533,3 +533,4 @@ SELECT * FROM load_errors WHERE deal_id = 'DEAL_ID' AND NOT is_resolved;
 **Last Updated**: October 20, 2025  
 **Target Audience**: FDD Analysts, Business Users
 
+

@@ -369,3 +369,4 @@ $$;
 
 SELECT 'Schedule generation procedures created successfully' AS status;
 
+

@@ -336,3 +336,4 @@ ORDER BY last_updated DESC;
 
 SELECT 'Core schema created successfully' AS status;
 
+

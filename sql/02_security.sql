@@ -307,3 +307,4 @@ ALTER ACCOUNT SET CLIENT_SESSION_KEEP_ALIVE_HEARTBEAT_FREQUENCY = 3600;  -- 1 ho
 
 SELECT 'Security configuration completed' AS status;
 
+
