@@ -39,7 +39,11 @@ CALL run_complete_poc();
 LIST @fdd_output_stage;
 ```
 
-✅ **Expected:** 3 CSV files (database_tab, income_statement, balance_sheet)
+✅ **Expected:** 4 CSV files created:
+- `database_tab_DEAL_HL_001.csv` - Pivoted data for Excel SUMIF formulas
+- `income_statement_DEAL_HL_001.csv` - IS structure
+- `balance_sheet_DEAL_HL_001.csv` - BS structure  
+- `ai_insights_DEAL_HL_001.csv` - **AI-generated variance analysis** 🆕
 
 ---
 
@@ -50,12 +54,14 @@ LIST @fdd_output_stage;
    - Download: `database_tab_DEAL_HL_001.csv`
    - Download: `income_statement_DEAL_HL_001.csv`
    - Download: `balance_sheet_DEAL_HL_001.csv`
+   - Download: `ai_insights_DEAL_HL_001.csv` 🆕
 
 2. **Import into Excel:**
    - Open your FDD Excel template
    - Database tab: Import `database_tab_DEAL_HL_001.csv`
    - Income Statement: Import `income_statement_DEAL_HL_001.csv`
    - Balance Sheet: Import `balance_sheet_DEAL_HL_001.csv`
+   - **AI Insights tab:** Import `ai_insights_DEAL_HL_001.csv` (review variance explanations) 🆕
 
 3. **Verify:**
    - Excel SUMIF formulas should populate with data ✅
@@ -77,10 +83,11 @@ LIST @fdd_output_stage;
 ## ✅ Success Checklist
 
 After deployment, verify:
-- [ ] 43 database objects created
+- [ ] 41 database objects created (14 tables, 5 views, 16 procedures, 6 functions)
 - [ ] Sample data loaded (696 TB rows, 29 mappings)
-- [ ] 3 CSV files generated in @fdd_output_stage
+- [ ] **4 CSV files generated** in @fdd_output_stage 🆕
 - [ ] database_tab CSV is 20 KB with 60 columns
+- [ ] **ai_insights CSV contains 15+ AI-generated variance explanations** 🆕
 - [ ] Excel import works and SUMIF formulas populate
 
 ---
