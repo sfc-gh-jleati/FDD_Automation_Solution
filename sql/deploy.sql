@@ -57,8 +57,8 @@ CREATE SCHEMA IF NOT EXISTS IDENTIFIER($SCHEMA_NAME)
 USE SCHEMA IDENTIFIER($SCHEMA_NAME);
 
 -- Create warehouse with auto-scaling
--- Note: IDENTIFIER() and WITH keywords cause issues with warehouses, use direct concatenation
-EXECUTE IMMEDIATE 
+-- Note: IDENTIFIER() not supported for warehouses, use session variable with concatenation
+SET WAREHOUSE_DDL = 
     'CREATE WAREHOUSE IF NOT EXISTS ' || $WAREHOUSE_NAME || 
     ' WAREHOUSE_SIZE = ' || $WAREHOUSE_SIZE ||
     ' AUTO_SUSPEND = ' || $AUTO_SUSPEND_SECONDS ||
@@ -69,7 +69,10 @@ EXECUTE IMMEDIATE
     ' INITIALLY_SUSPENDED = FALSE' ||
     ' COMMENT = ''Warehouse for FDD data processing and AI analysis''';
 
-EXECUTE IMMEDIATE 'USE WAREHOUSE ' || $WAREHOUSE_NAME;
+EXECUTE IMMEDIATE $WAREHOUSE_DDL;
+
+SET USE_WAREHOUSE_STMT = 'USE WAREHOUSE ' || $WAREHOUSE_NAME;
+EXECUTE IMMEDIATE $USE_WAREHOUSE_STMT;
 
 -- Record deployment in schema migrations
 CREATE TABLE IF NOT EXISTS schema_migrations (
