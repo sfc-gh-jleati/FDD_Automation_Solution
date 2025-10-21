@@ -57,18 +57,19 @@ CREATE SCHEMA IF NOT EXISTS IDENTIFIER($SCHEMA_NAME)
 USE SCHEMA IDENTIFIER($SCHEMA_NAME);
 
 -- Create warehouse with auto-scaling
-CREATE WAREHOUSE IF NOT EXISTS IDENTIFIER($WAREHOUSE_NAME)
-    WITH 
-    WAREHOUSE_SIZE = $WAREHOUSE_SIZE
-    AUTO_SUSPEND = $AUTO_SUSPEND_SECONDS
-    AUTO_RESUME = TRUE
-    MIN_CLUSTER_COUNT = 1
-    MAX_CLUSTER_COUNT = 3  -- Allow auto-scaling during peak load
-    SCALING_POLICY = 'STANDARD'
-    INITIALLY_SUSPENDED = FALSE
-    COMMENT = 'Warehouse for FDD data processing and AI analysis';
+-- Note: IDENTIFIER() and WITH keywords cause issues with warehouses, use direct concatenation
+EXECUTE IMMEDIATE 
+    'CREATE WAREHOUSE IF NOT EXISTS ' || $WAREHOUSE_NAME || 
+    ' WAREHOUSE_SIZE = ' || $WAREHOUSE_SIZE ||
+    ' AUTO_SUSPEND = ' || $AUTO_SUSPEND_SECONDS ||
+    ' AUTO_RESUME = TRUE' ||
+    ' MIN_CLUSTER_COUNT = 1' ||
+    ' MAX_CLUSTER_COUNT = 3' ||
+    ' SCALING_POLICY = ''STANDARD''' ||
+    ' INITIALLY_SUSPENDED = FALSE' ||
+    ' COMMENT = ''Warehouse for FDD data processing and AI analysis''';
 
-USE WAREHOUSE IDENTIFIER($WAREHOUSE_NAME);
+EXECUTE IMMEDIATE 'USE WAREHOUSE ' || $WAREHOUSE_NAME;
 
 -- Record deployment in schema migrations
 CREATE TABLE IF NOT EXISTS schema_migrations (
@@ -317,4 +318,5 @@ Documentation: See README.md and docs/ directory for detailed guides
 SELECT * FROM v_system_config;
 
 SELECT 'Deployment script completed successfully!' AS final_status;
+
 
