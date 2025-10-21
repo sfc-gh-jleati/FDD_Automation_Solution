@@ -56,8 +56,11 @@ FROM VALUES
     
     -- Environment
     ('environment', 'DEVELOPMENT', 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', 0),
-    ('schema_version', '1.0.0', 'Current schema version', 0),
-    ('deployment_date', CURRENT_TIMESTAMP(), 'Date of last deployment', 0);
+    ('schema_version', '1.0.0', 'Current schema version', 0);
+
+-- Add deployment_date separately since CURRENT_TIMESTAMP() can't be used in VALUES clause
+INSERT INTO system_config (config_key, config_value, description, is_sensitive)
+SELECT 'deployment_date', TO_VARIANT(CURRENT_TIMESTAMP()), 'Date of last deployment', false;
 
 -- Helper function to get config values
 CREATE OR REPLACE FUNCTION get_config(key_name VARCHAR)

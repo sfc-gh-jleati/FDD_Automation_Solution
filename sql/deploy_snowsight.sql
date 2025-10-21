@@ -162,8 +162,11 @@ FROM VALUES
     
     -- Environment
     ('environment', 'DEVELOPMENT', 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', 0),
-    ('schema_version', '1.0.0', 'Current schema version', 0),
-    ('deployment_date', CURRENT_TIMESTAMP(), 'Date of last deployment', 0);
+    ('schema_version', '1.0.0', 'Current schema version', 0);
+
+-- Add deployment_date separately since CURRENT_TIMESTAMP() can't be used in VALUES clause
+INSERT INTO system_config (config_key, config_value, description, is_sensitive)
+SELECT 'deployment_date', TO_VARIANT(CURRENT_TIMESTAMP()), 'Date of last deployment', false;
 
 -- Helper function to get config values
 CREATE OR REPLACE FUNCTION get_config(key_name VARCHAR)
@@ -293,7 +296,8 @@ CREATE TABLE IF NOT EXISTS trial_balance_raw (
 ALTER TABLE trial_balance_raw CLUSTER BY (deal_id, period_date);
 
 -- Add uploaded_by column if it doesn't exist (for backward compatibility)
-ALTER TABLE trial_balance_raw ADD COLUMN IF NOT EXISTS uploaded_by VARCHAR(100) DEFAULT CURRENT_USER();
+-- Note: Can't use CURRENT_USER() as default in ALTER TABLE ADD COLUMN
+ALTER TABLE trial_balance_raw ADD COLUMN IF NOT EXISTS uploaded_by VARCHAR(100);
 
 -- Account Mappings
 CREATE TABLE IF NOT EXISTS account_mappings (
@@ -326,8 +330,7 @@ CREATE TABLE IF NOT EXISTS account_mappings (
 -- Add clustering
 ALTER TABLE account_mappings CLUSTER BY (deal_id, account_number);
 
--- Add is_active column if it doesn't exist (for backward compatibility)
-ALTER TABLE account_mappings ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT TRUE;
+-- Note: is_active column already exists in table definition (line 323)
 
 -- AI Insights Storage
 CREATE TABLE IF NOT EXISTS ai_insights (
@@ -925,9 +928,19 @@ SELECT 'Security configuration completed' AS status;
 -- ============================================================================
 
 -- Procedure: Load Trial Balance with comprehensive error handling
--- Drop existing to avoid overload errors from previous versions
-DROP PROCEDURE IF EXISTS load_trial_balance(VARCHAR);
-DROP PROCEDURE IF EXISTS load_trial_balance(VARCHAR, VARCHAR);
+-- Drop all possible existing versions to avoid overload errors
+-- Note: Must match exact signature including DEFAULT parameters
+EXECUTE IMMEDIATE $$
+BEGIN
+    DROP PROCEDURE IF EXISTS load_trial_balance();
+    DROP PROCEDURE IF EXISTS load_trial_balance(VARCHAR);
+    DROP PROCEDURE IF EXISTS load_trial_balance(VARCHAR, VARCHAR);
+EXCEPTION
+    WHEN OTHER THEN
+        -- Ignore errors if procedure doesn't exist
+        RETURN 'Procedures dropped or did not exist';
+END;
+$$;
 
 CREATE OR REPLACE PROCEDURE load_trial_balance(
     file_name VARCHAR DEFAULT '01_sample_trial_balance_24mo.csv',
@@ -1101,9 +1114,18 @@ END;
 $$;
 
 -- Procedure: Load Account Mappings with validation
--- Drop existing to avoid overload errors from previous versions
-DROP PROCEDURE IF EXISTS load_account_mappings(VARCHAR);
-DROP PROCEDURE IF EXISTS load_account_mappings(VARCHAR, VARCHAR);
+-- Drop all possible existing versions to avoid overload errors
+EXECUTE IMMEDIATE $$
+BEGIN
+    DROP PROCEDURE IF EXISTS load_account_mappings();
+    DROP PROCEDURE IF EXISTS load_account_mappings(VARCHAR);
+    DROP PROCEDURE IF EXISTS load_account_mappings(VARCHAR, VARCHAR);
+EXCEPTION
+    WHEN OTHER THEN
+        -- Ignore errors if procedure doesn't exist
+        RETURN 'Procedures dropped or did not exist';
+END;
+$$;
 
 CREATE OR REPLACE PROCEDURE load_account_mappings(
     file_name VARCHAR DEFAULT '02_sample_trial_balance_24mo.csv',
