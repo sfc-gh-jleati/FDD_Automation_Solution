@@ -122,46 +122,47 @@ CREATE TABLE IF NOT EXISTS system_config (
     updated_by VARCHAR(100) DEFAULT CURRENT_USER()
 );
 
--- Insert default configuration values
+-- Insert default configuration values using SELECT to support TO_VARIANT
 INSERT INTO system_config (config_key, config_value, description, is_sensitive)
-VALUES
+SELECT column1, TO_VARIANT(column2), column3, column4
+FROM VALUES
     -- Data Quality Thresholds
-    ('balance_tolerance_dollars', TO_VARIANT(0.10), 'Acceptable rounding difference for trial balance validation (in dollars)', false),
-    ('min_variance_amount', TO_VARIANT(5000.00), 'Minimum dollar amount to trigger variance analysis', false),
-    ('variance_threshold_pct', TO_VARIANT(0.20), 'Minimum percentage change to flag as variance (0.20 = 20%)', false),
-    ('max_error_rate_pct', TO_VARIANT(0.05), 'Maximum acceptable error rate for data loads (0.05 = 5%)', false),
+    ('balance_tolerance_dollars', 0.10, 'Acceptable rounding difference for trial balance validation (in dollars)', false),
+    ('min_variance_amount', 5000.00, 'Minimum dollar amount to trigger variance analysis', false),
+    ('variance_threshold_pct', 0.20, 'Minimum percentage change to flag as variance (0.20 = 20%)', false),
+    ('max_error_rate_pct', 0.05, 'Maximum acceptable error rate for data loads (0.05 = 5%)', false),
     
     -- AI Configuration
-    ('max_ai_insights', TO_VARIANT(15), 'Maximum number of AI insights to generate per deal', false),
-    ('ai_model_variance', TO_VARIANT('claude-4-sonnet'), 'AI model for variance analysis', false),
-    ('ai_model_trends', TO_VARIANT('claude-4-sonnet'), 'AI model for trend analysis', false),
-    ('ai_batch_size', TO_VARIANT(50), 'Number of variance records to process in single AI batch', false),
+    ('max_ai_insights', 15, 'Maximum number of AI insights to generate per deal', false),
+    ('ai_model_variance', 'claude-4-sonnet', 'AI model for variance analysis', false),
+    ('ai_model_trends', 'claude-4-sonnet', 'AI model for trend analysis', false),
+    ('ai_batch_size', 50, 'Number of variance records to process in single AI batch', false),
     
     -- Performance & Scaling
-    ('warehouse_size_default', TO_VARIANT('SMALL'), 'Default warehouse size for processing', false),
-    ('warehouse_auto_suspend', TO_VARIANT(60), 'Auto-suspend timeout in seconds', false),
-    ('max_pivot_periods', TO_VARIANT(24), 'Maximum number of periods in pivoted views', false),
-    ('query_timeout_seconds', TO_VARIANT(3600), 'Maximum query execution time (1 hour)', false),
+    ('warehouse_size_default', 'SMALL', 'Default warehouse size for processing', false),
+    ('warehouse_auto_suspend', 60, 'Auto-suspend timeout in seconds', false),
+    ('max_pivot_periods', 24, 'Maximum number of periods in pivoted views', false),
+    ('query_timeout_seconds', 3600, 'Maximum query execution time (1 hour)', false),
     
     -- File Management
-    ('input_stage_name', TO_VARIANT('fdd_input_stage'), 'Name of input file stage', false),
-    ('output_stage_name', TO_VARIANT('fdd_output_stage'), 'Name of output file stage', false),
-    ('default_file_format', TO_VARIANT('csv_format'), 'Default file format for imports/exports', false),
+    ('input_stage_name', 'fdd_input_stage', 'Name of input file stage', false),
+    ('output_stage_name', 'fdd_output_stage', 'Name of output file stage', false),
+    ('default_file_format', 'csv_format', 'Default file format for imports/exports', false),
     
     -- Audit & Retention
-    ('audit_retention_days', TO_VARIANT(90), 'Number of days to retain audit logs', false),
-    ('error_log_retention_days', TO_VARIANT(180), 'Number of days to retain error logs', false),
-    ('output_retention_days', TO_VARIANT(30), 'Number of days to retain output files in stage', false),
+    ('audit_retention_days', 90, 'Number of days to retain audit logs', false),
+    ('error_log_retention_days', 180, 'Number of days to retain error logs', false),
+    ('output_retention_days', 30, 'Number of days to retain output files in stage', false),
     
     -- Security
-    ('deal_id_validation_regex', TO_VARIANT('^[A-Z0-9_-]+$'), 'Regex pattern for validating deal_id format', false),
-    ('max_deal_id_length', TO_VARIANT(50), 'Maximum length for deal_id', false),
-    ('enable_row_level_security', TO_VARIANT(true), 'Enable row-level security policies', false),
+    ('deal_id_validation_regex', '^[A-Z0-9_-]+$', 'Regex pattern for validating deal_id format', false),
+    ('max_deal_id_length', 50, 'Maximum length for deal_id', false),
+    ('enable_row_level_security', true, 'Enable row-level security policies', false),
     
     -- Environment
-    ('environment', TO_VARIANT('DEVELOPMENT'), 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', false),
-    ('schema_version', TO_VARIANT('1.0.0'), 'Current schema version', false),
-    ('deployment_date', TO_VARIANT(CURRENT_TIMESTAMP()), 'Date of last deployment', false);
+    ('environment', 'DEVELOPMENT', 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', false),
+    ('schema_version', '1.0.0', 'Current schema version', false),
+    ('deployment_date', CURRENT_TIMESTAMP(), 'Date of last deployment', false);
 
 -- Helper function to get config values
 CREATE OR REPLACE FUNCTION get_config(key_name VARCHAR)
@@ -290,6 +291,9 @@ CREATE TABLE IF NOT EXISTS trial_balance_raw (
 -- Add clustering for performance
 ALTER TABLE trial_balance_raw CLUSTER BY (deal_id, period_date);
 
+-- Add uploaded_by column if it doesn't exist (for backward compatibility)
+ALTER TABLE trial_balance_raw ADD COLUMN IF NOT EXISTS uploaded_by VARCHAR(100) DEFAULT CURRENT_USER();
+
 -- Account Mappings
 CREATE TABLE IF NOT EXISTS account_mappings (
     deal_id VARCHAR(50) NOT NULL,
@@ -320,6 +324,9 @@ CREATE TABLE IF NOT EXISTS account_mappings (
 
 -- Add clustering
 ALTER TABLE account_mappings CLUSTER BY (deal_id, account_number);
+
+-- Add is_active column if it doesn't exist (for backward compatibility)
+ALTER TABLE account_mappings ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT TRUE;
 
 -- AI Insights Storage
 CREATE TABLE IF NOT EXISTS ai_insights (
@@ -396,9 +403,9 @@ CREATE TABLE IF NOT EXISTS audit_log (
     credits_used NUMBER(18,6)
 );
 
--- Index for common queries
-CREATE INDEX IF NOT EXISTS idx_audit_deal_time ON audit_log(deal_id, log_timestamp DESC);
-CREATE INDEX IF NOT EXISTS idx_audit_status ON audit_log(status, log_timestamp DESC);
+-- Note: Indexes on standard tables are not supported in Snowflake
+-- Snowflake uses automatic micro-partitioning and clustering keys instead
+-- Use ALTER TABLE ... CLUSTER BY for performance optimization if needed
 
 -- Error Log for data quality issues
 CREATE TABLE IF NOT EXISTS load_errors (
@@ -423,8 +430,6 @@ CREATE TABLE IF NOT EXISTS load_errors (
     resolution_notes VARCHAR(5000)
 );
 
-CREATE INDEX IF NOT EXISTS idx_errors_unresolved ON load_errors(deal_id, is_resolved, error_timestamp DESC);
-
 -- Data Quality Validation Results
 CREATE TABLE IF NOT EXISTS data_quality_checks (
     check_id VARCHAR(50) DEFAULT UUID_STRING() PRIMARY KEY,
@@ -445,8 +450,6 @@ CREATE TABLE IF NOT EXISTS data_quality_checks (
     message VARCHAR(2000),
     details VARCHAR(5000)
 );
-
-CREATE INDEX IF NOT EXISTS idx_dq_deal_time ON data_quality_checks(deal_id, check_timestamp DESC);
 
 -- User Deal Permissions (for row-level security)
 CREATE TABLE IF NOT EXISTS user_deal_permissions (
@@ -921,6 +924,10 @@ SELECT 'Security configuration completed' AS status;
 -- ============================================================================
 
 -- Procedure: Load Trial Balance with comprehensive error handling
+-- Drop existing to avoid overload errors from previous versions
+DROP PROCEDURE IF EXISTS load_trial_balance(VARCHAR);
+DROP PROCEDURE IF EXISTS load_trial_balance(VARCHAR, VARCHAR);
+
 CREATE OR REPLACE PROCEDURE load_trial_balance(
     file_name VARCHAR DEFAULT '01_sample_trial_balance_24mo.csv',
     deal_id_filter VARCHAR DEFAULT NULL
@@ -1093,8 +1100,12 @@ END;
 $$;
 
 -- Procedure: Load Account Mappings with validation
+-- Drop existing to avoid overload errors from previous versions
+DROP PROCEDURE IF EXISTS load_account_mappings(VARCHAR);
+DROP PROCEDURE IF EXISTS load_account_mappings(VARCHAR, VARCHAR);
+
 CREATE OR REPLACE PROCEDURE load_account_mappings(
-    file_name VARCHAR DEFAULT '02_sample_account_mappings_24mo.csv',
+    file_name VARCHAR DEFAULT '02_sample_trial_balance_24mo.csv',
     deal_id_filter VARCHAR DEFAULT NULL
 )
 RETURNS TABLE(status VARCHAR, rows_loaded NUMBER, message VARCHAR)
@@ -1932,15 +1943,13 @@ BEGIN
     -- Build output path
     output_path := '@' || get_config_string('output_stage_name') || '/database_tab_' || :safe_deal_id || '.csv';
     
-    -- Export using parameterized query to prevent SQL injection
-    COPY INTO IDENTIFIER(:output_path)
-    FROM (
-        SELECT * FROM v_database_tab_pivoted WHERE deal_id = :safe_deal_id
-    )
-    FILE_FORMAT = (FORMAT_NAME = 'csv_format')
-    HEADER = TRUE
-    OVERWRITE = TRUE
-    SINGLE = TRUE;
+    -- Export using EXECUTE IMMEDIATE (COPY INTO doesn't support variable paths)
+    LET copy_sql := 'COPY INTO ' || :output_path || 
+                    ' FROM (SELECT * FROM v_database_tab_pivoted WHERE deal_id = ''' || :safe_deal_id || ''') ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
+    
+    EXECUTE IMMEDIATE :copy_sql;
     
     file_count := SQLROWCOUNT;
     
@@ -1992,16 +2001,12 @@ BEGIN
     
     output_path := '@' || get_config_string('output_stage_name') || '/income_statement_' || :safe_deal_id || '.csv';
     
-    COPY INTO IDENTIFIER(:output_path)
-    FROM (
-        SELECT row_num, row_label, row_type, account_filter, row_format_json 
-        FROM temp_is_schedule 
-        ORDER BY row_num
-    )
-    FILE_FORMAT = (FORMAT_NAME = 'csv_format')
-    HEADER = TRUE
-    OVERWRITE = TRUE
-    SINGLE = TRUE;
+    LET copy_sql := 'COPY INTO ' || :output_path || 
+                    ' FROM (SELECT row_num, row_label, row_type, account_filter, row_format_json FROM temp_is_schedule ORDER BY row_num) ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
+    
+    EXECUTE IMMEDIATE :copy_sql;
     
     file_count := SQLROWCOUNT;
     
@@ -2050,16 +2055,12 @@ BEGIN
     
     output_path := '@' || get_config_string('output_stage_name') || '/balance_sheet_' || :safe_deal_id || '.csv';
     
-    COPY INTO IDENTIFIER(:output_path)
-    FROM (
-        SELECT row_num, row_label, row_type, account_filter, row_format_json 
-        FROM temp_bs_schedule 
-        ORDER BY row_num
-    )
-    FILE_FORMAT = (FORMAT_NAME = 'csv_format')
-    HEADER = TRUE
-    OVERWRITE = TRUE
-    SINGLE = TRUE;
+    LET copy_sql := 'COPY INTO ' || :output_path || 
+                    ' FROM (SELECT row_num, row_label, row_type, account_filter, row_format_json FROM temp_bs_schedule ORDER BY row_num) ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
+    
+    EXECUTE IMMEDIATE :copy_sql;
     
     file_count := SQLROWCOUNT;
     
@@ -2107,29 +2108,15 @@ BEGIN
     
     output_path := '@' || get_config_string('output_stage_name') || '/ai_insights_' || :safe_deal_id || '.csv';
     
-    COPY INTO IDENTIFIER(:output_path)
-    FROM (
-        SELECT 
-            insight_type, 
-            severity, 
-            COALESCE(account_name, 'General') AS account_name,
-            TO_CHAR(period_date, 'Mon YYYY') AS period, 
-            metric_value, 
-            comparison_value,
-            variance_pct, 
-            insight_text, 
-            suggested_question, 
-            model_used
-        FROM ai_insights 
-        WHERE deal_id = :safe_deal_id
-        ORDER BY 
-            CASE severity WHEN 'high' THEN 1 WHEN 'medium' THEN 2 ELSE 3 END, 
-            ABS(variance_pct) DESC
-    )
-    FILE_FORMAT = (FORMAT_NAME = 'csv_format')
-    HEADER = TRUE
-    OVERWRITE = TRUE
-    SINGLE = TRUE;
+    LET copy_sql := 'COPY INTO ' || :output_path || 
+                    ' FROM (SELECT insight_type, severity, COALESCE(account_name, ''General'') AS account_name, ' ||
+                    ' TO_CHAR(period_date, ''Mon YYYY'') AS period, metric_value, comparison_value, variance_pct, ' ||
+                    ' insight_text, suggested_question, model_used FROM ai_insights WHERE deal_id = ''' || :safe_deal_id || ''' ' ||
+                    ' ORDER BY CASE severity WHEN ''high'' THEN 1 WHEN ''medium'' THEN 2 ELSE 3 END, ABS(variance_pct) DESC) ' ||
+                    ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
+                    ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
+    
+    EXECUTE IMMEDIATE :copy_sql;
     
     file_count := SQLROWCOUNT;
     
@@ -2288,16 +2275,10 @@ SELECT
     COUNT(*),
     CASE WHEN COUNT(*) >= 4 THEN 'PASS' ELSE 'FAIL' END
 FROM information_schema.functions
-WHERE function_schema = $SCHEMA_NAME
+WHERE function_schema = $SCHEMA_NAME;
 
-UNION ALL
-
-SELECT 
-    'Validation: Roles',
-    COUNT(*),
-    CASE WHEN COUNT(*) >= 4 THEN 'PASS' ELSE 'FAIL' END
-FROM information_schema.roles
-WHERE name LIKE 'FDD_%_ROLE';
+-- Note: information_schema.roles does not exist in Snowflake
+-- Use SHOW ROLES command manually to verify FDD roles were created
 
 -- ============================================================================
 -- STEP 9: HELPER PROCEDURES FOR POC/DEMO
