@@ -1052,9 +1052,9 @@ BEGIN
         HAVING ABS(SUM(debit_amount) - SUM(credit_amount)) > get_config_number('balance_tolerance_dollars')
     );
     
-    -- Log data quality check
+    -- Log data quality check (using SELECT to support OBJECT_CONSTRUCT)
     INSERT INTO data_quality_checks (deal_id, check_name, check_type, passed, actual_value, severity, message)
-    VALUES (
+    SELECT 
         :deal_id_filter,
         'Trial Balance Balancing',
         'BALANCE',
@@ -1064,8 +1064,7 @@ BEGIN
         CASE 
             WHEN :unbalanced_count = 0 THEN 'All periods balanced (debits = credits)'
             ELSE :unbalanced_count || ' periods out of balance. Max imbalance: $' || ROUND(:max_imbalance, 2)
-        END
-    );
+        END;
     
     COMMIT;
     
@@ -1198,9 +1197,9 @@ BEGIN
     WHERE m.account_number IS NULL
     AND t.deal_id = COALESCE(:deal_id_filter, t.deal_id);
     
-    -- Log validation result
+    -- Log validation result (using SELECT to support OBJECT_CONSTRUCT)
     INSERT INTO data_quality_checks (deal_id, check_name, check_type, passed, actual_value, severity, message)
-    VALUES (
+    SELECT
         :deal_id_filter,
         'Account Mapping Completeness',
         'COMPLETENESS',
@@ -1210,8 +1209,7 @@ BEGIN
         CASE 
             WHEN :unmapped_count = 0 THEN 'All accounts have mappings'
             ELSE :unmapped_count || ' accounts missing mappings'
-        END
-    );
+        END;
     
     IF (:unmapped_count > 0) THEN
         -- Log unmapped accounts as errors
