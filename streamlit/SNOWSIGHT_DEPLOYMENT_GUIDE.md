@@ -47,12 +47,11 @@
 ```sql
 USE DATABASE HL_FDD_POC;
 USE SCHEMA TRIAL_BALANCE;
-USE WAREHOUSE fdd_wh;
 
 CREATE OR REPLACE STREAMLIT fdd_admin_dashboard
     ROOT_LOCATION = '@streamlit_stage'
     MAIN_FILE = 'fdd_admin_dashboard.py'
-    QUERY_WAREHOUSE = fdd_wh
+    QUERY_WAREHOUSE = FDD_POC_WH
     TITLE = 'FDD Automation Admin Dashboard'
     COMMENT = 'Comprehensive admin interface for FDD automation';
 

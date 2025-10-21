@@ -81,12 +81,11 @@ Expected output: All checks show ✅ PASS
 ### Optional: Deploy Admin Dashboard (Streamlit)
 
 ```sql
--- See streamlit/README.md for complete instructions
--- Upload files to @streamlit_stage via Snowsight UI, then:
-!source streamlit/deploy_streamlit.sql
+-- Upload files to @streamlit_stage via Snowsight UI
+-- Then run: streamlit/deploy_streamlit.sql
 ```
 
-Access via: **Projects → Streamlit → FDD Automation Admin Dashboard**
+**Access:** Projects → Streamlit → **FDD Automation Admin Dashboard**
 
 ---
 

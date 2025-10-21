@@ -388,7 +388,7 @@ PUT file:///path/to/environment.yml @streamlit_stage OVERWRITE=TRUE AUTO_COMPRES
 CREATE OR REPLACE STREAMLIT fdd_admin_dashboard
     ROOT_LOCATION = '@streamlit_stage'
     MAIN_FILE = 'fdd_admin_dashboard.py'
-    QUERY_WAREHOUSE = fdd_wh
+    QUERY_WAREHOUSE = FDD_POC_WH
     TITLE = 'FDD Automation Admin Dashboard';
 
 -- Grant access
