@@ -191,11 +191,11 @@ DECLARE
     tb_result RESULTSET;
     am_result RESULTSET;
 BEGIN
-    -- Load trial balance
-    CALL load_trial_balance() INTO :tb_result;
+    -- Load trial balance (correct syntax for RETURNS TABLE procedures)
+    tb_result := (CALL load_trial_balance());
     
-    -- Load account mappings  
-    CALL load_account_mappings() INTO :am_result;
+    -- Load account mappings (correct syntax for RETURNS TABLE procedures)
+    am_result := (CALL load_account_mappings());
     
     RETURN 'SUCCESS: Sample data loaded. Ready for schedule generation.';
 EXCEPTION
