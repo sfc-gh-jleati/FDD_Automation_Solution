@@ -1518,6 +1518,7 @@ DECLARE
     start_time_var TIMESTAMP DEFAULT CURRENT_TIMESTAMP();
     rows_created NUMBER DEFAULT 0;
     session_id VARCHAR DEFAULT CURRENT_SESSION()::VARCHAR;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate input
     IF (NOT validate_deal_id(:deal_id_param)) THEN
@@ -1663,13 +1664,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -1687,6 +1690,7 @@ DECLARE
     start_time_var TIMESTAMP DEFAULT CURRENT_TIMESTAMP();
     rows_created NUMBER DEFAULT 0;
     session_id VARCHAR DEFAULT CURRENT_SESSION()::VARCHAR;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate input
     IF (NOT validate_deal_id(:deal_id_param)) THEN
@@ -1767,13 +1771,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -1807,6 +1813,7 @@ DECLARE
     insight_count NUMBER DEFAULT 0;
     ai_model VARCHAR DEFAULT get_config_string('ai_model_variance');
     max_insights NUMBER DEFAULT get_config_number('max_ai_insights');
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate input
     IF (NOT validate_deal_id(:deal_id_param)) THEN
@@ -1938,10 +1945,10 @@ EXCEPTION
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -1961,6 +1968,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate and sanitize deal_id
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -1998,13 +2006,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -2020,6 +2030,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate and sanitize deal_id
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -2054,13 +2065,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -2076,6 +2089,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     safe_deal_id := sanitize_deal_id(:deal_id_param);
     IF (safe_deal_id IS NULL) THEN
@@ -2107,13 +2121,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -2129,6 +2145,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     safe_deal_id := sanitize_deal_id(:deal_id_param);
     IF (safe_deal_id IS NULL) THEN
@@ -2163,13 +2180,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -2190,6 +2209,7 @@ DECLARE
     tb_row_count NUMBER;
     insight_count NUMBER;
     safe_deal_id VARCHAR;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate and sanitize input
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -2249,13 +2269,15 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
+        error_msg := SQLERRM;  -- Capture error message
+        
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
             status = 'ERROR',
-            error_message = SQLERRM
+            error_message = :error_msg
         WHERE log_id = :log_id_var;
         
-        RETURN 'ERROR: ' || SQLERRM;
+        RETURN 'ERROR: ' || :error_msg;
 END;
 $$;
 
@@ -2325,6 +2347,7 @@ $$
 DECLARE
     tb_result RESULTSET;
     am_result RESULTSET;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Load trial balance (correct syntax for RETURNS TABLE procedures)
     tb_result := (CALL load_trial_balance());
@@ -2335,7 +2358,9 @@ BEGIN
     RETURN 'SUCCESS: Sample data loaded. Ready for schedule generation.';
 EXCEPTION
     WHEN OTHER THEN
-        RETURN 'ERROR: Sample data load failed - ' || SQLERRM;
+        error_msg := SQLERRM;  -- Capture error message
+        
+        RETURN 'ERROR: Sample data load failed - ' || :error_msg;
 END;
 $$;
 
@@ -2348,6 +2373,7 @@ $$
 DECLARE
     load_result VARCHAR;
     gen_result VARCHAR;
+    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Load sample data
     CALL load_sample_data() INTO :load_result;
@@ -2358,7 +2384,9 @@ BEGIN
     RETURN 'PoC Complete! ' || :gen_result || ' Run "LIST @fdd_output_stage;" to see output files.';
 EXCEPTION
     WHEN OTHER THEN
-        RETURN 'ERROR: PoC execution failed - ' || SQLERRM;
+        error_msg := SQLERRM;  -- Capture error message
+        
+        RETURN 'ERROR: PoC execution failed - ' || :error_msg;
 END;
 $$;
 
