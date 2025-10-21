@@ -237,9 +237,7 @@ BEGIN
     
     rows_loaded := SQLROWCOUNT;
     
-    -- CRITICAL FIX: Set is_active = TRUE for all loaded mappings
-    -- The CSV doesn't include this column, so it defaults to NULL
-    -- The view filters on is_active = TRUE, so NULL values are excluded
+    -- Set is_active flag (CSV doesn't include this column)
     IF (:deal_id_filter IS NULL) THEN
         UPDATE account_mappings SET is_active = TRUE WHERE is_active IS NULL;
     ELSE

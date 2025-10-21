@@ -104,9 +104,6 @@ CREATE TABLE IF NOT EXISTS ai_insights (
     is_reviewed BOOLEAN DEFAULT FALSE,
     reviewed_by VARCHAR(100),
     reviewed_timestamp TIMESTAMP_NTZ
-    
-    -- Foreign key constraint removed for deployment flexibility
-    -- In production, enforce referential integrity via application logic or triggers
 );
 
 -- ============================================================================

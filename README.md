@@ -96,10 +96,7 @@ Access via: **Projects → Streamlit → FDD Automation Admin Dashboard**
 production/
 ├── README.md                           # This file
 ├── HANDOFF_CHECKLIST.md                # Client acceptance checklist
-├── HANDOFF.md                          # Detailed handoff documentation
-├── PRODUCTION_TEST_RESULTS.md          # Final validation results
-├── REPOSITORY_STATUS.md                # Production readiness status
-├── REFACTORING_SUMMARY.md              # Technical improvements made
+├── HANDOFF.md                          # Technical documentation
 │
 ├── sql/                                # Snowflake SQL scripts
 │   ├── deploy_snowsight.sql            # Complete deployment (Snowsight)

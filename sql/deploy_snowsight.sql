@@ -371,9 +371,6 @@ CREATE TABLE IF NOT EXISTS ai_insights (
     is_reviewed BOOLEAN DEFAULT FALSE,
     reviewed_by VARCHAR(100),
     reviewed_timestamp TIMESTAMP_NTZ
-    
-    -- Foreign key constraint removed for deployment flexibility
-    -- In production, enforce referential integrity via application logic or triggers
 );
 
 -- ============================================================================
@@ -964,7 +961,7 @@ DECLARE
     max_imbalance NUMBER DEFAULT 0;
     stage_path VARCHAR;
     result_cursor RESULTSET;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Log start
     INSERT INTO audit_log (log_id, procedure_name, deal_id, start_time, status, message)
@@ -1099,7 +1096,6 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        -- Capture error message (SQLERRM cannot be used directly in SELECT)
         error_msg := SQLERRM;
         
         ROLLBACK;
@@ -1153,7 +1149,7 @@ DECLARE
     unmapped_count NUMBER DEFAULT 0;
     stage_path VARCHAR;
     result_cursor RESULTSET;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Validate deal_id if provided
     IF (:deal_id_filter IS NOT NULL AND NOT validate_deal_id(:deal_id_filter)) THEN
@@ -1192,9 +1188,7 @@ BEGIN
     
     rows_loaded := SQLROWCOUNT;
     
-    -- CRITICAL FIX: Set is_active = TRUE for all loaded mappings
-    -- The CSV doesn't include this column, so it defaults to NULL
-    -- The view filters on is_active = TRUE, so NULL values are excluded
+    -- Set is_active flag (CSV doesn't include this column)
     IF (:deal_id_filter IS NULL) THEN
         UPDATE account_mappings SET is_active = TRUE WHERE is_active IS NULL;
     ELSE
@@ -1275,7 +1269,6 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        -- Capture error message (SQLERRM cannot be used directly in SELECT)
         error_msg := SQLERRM;
         
         ROLLBACK;
@@ -1536,7 +1529,7 @@ DECLARE
     start_time_var TIMESTAMP DEFAULT CURRENT_TIMESTAMP();
     rows_created NUMBER DEFAULT 0;
     session_id VARCHAR DEFAULT CURRENT_SESSION()::VARCHAR;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Validate input
     IF (NOT validate_deal_id(:deal_id_param)) THEN
@@ -1682,7 +1675,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -1708,7 +1701,7 @@ DECLARE
     start_time_var TIMESTAMP DEFAULT CURRENT_TIMESTAMP();
     rows_created NUMBER DEFAULT 0;
     session_id VARCHAR DEFAULT CURRENT_SESSION()::VARCHAR;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Validate input
     IF (NOT validate_deal_id(:deal_id_param)) THEN
@@ -1789,7 +1782,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -1831,7 +1824,7 @@ DECLARE
     insight_count NUMBER DEFAULT 0;
     ai_model VARCHAR DEFAULT get_config_string('ai_model_variance');
     max_insights NUMBER DEFAULT get_config_number('max_ai_insights');
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Validate input
     IF (NOT validate_deal_id(:deal_id_param)) THEN
@@ -1986,8 +1979,8 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
-    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    copy_sql VARCHAR;
+    error_msg VARCHAR;
 BEGIN
     -- Validate and sanitize deal_id
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -2025,7 +2018,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -2049,8 +2042,8 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
-    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    copy_sql VARCHAR;
+    error_msg VARCHAR;
 BEGIN
     -- Validate and sanitize deal_id
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -2085,7 +2078,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -2109,8 +2102,8 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
-    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    copy_sql VARCHAR;
+    error_msg VARCHAR;
 BEGIN
     safe_deal_id := sanitize_deal_id(:deal_id_param);
     IF (safe_deal_id IS NULL) THEN
@@ -2142,7 +2135,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -2166,8 +2159,8 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
-    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    copy_sql VARCHAR;
+    error_msg VARCHAR;
 BEGIN
     safe_deal_id := sanitize_deal_id(:deal_id_param);
     IF (safe_deal_id IS NULL) THEN
@@ -2202,7 +2195,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -2232,7 +2225,7 @@ DECLARE
     insight_count NUMBER;
     copy_sql VARCHAR;  -- For dynamic COPY INTO statement
     safe_deal_id VARCHAR;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Validate and sanitize input
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -2292,7 +2285,7 @@ BEGIN
     
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         UPDATE audit_log 
         SET end_time = CURRENT_TIMESTAMP(),
@@ -2370,18 +2363,18 @@ $$
 DECLARE
     tb_result RESULTSET;
     am_result RESULTSET;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
-    -- Load trial balance (correct syntax for RETURNS TABLE procedures)
+    -- Load trial balance
     tb_result := (CALL load_trial_balance());
     
-    -- Load account mappings (correct syntax for RETURNS TABLE procedures)
+    -- Load account mappings
     am_result := (CALL load_account_mappings());
     
     RETURN 'SUCCESS: Sample data loaded. Ready for schedule generation.';
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         RETURN 'ERROR: Sample data load failed - ' || :error_msg;
 END;
@@ -2396,7 +2389,7 @@ $$
 DECLARE
     load_result VARCHAR;
     gen_result VARCHAR;
-    error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
+    error_msg VARCHAR;
 BEGIN
     -- Load sample data
     CALL load_sample_data() INTO :load_result;
@@ -2407,7 +2400,7 @@ BEGIN
     RETURN 'PoC Complete! ' || :gen_result || ' Run "LIST @fdd_output_stage;" to see output files.';
 EXCEPTION
     WHEN OTHER THEN
-        error_msg := SQLERRM;  -- Capture error message
+        error_msg := SQLERRM;
         
         RETURN 'ERROR: PoC execution failed - ' || :error_msg;
 END;
