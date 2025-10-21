@@ -193,12 +193,12 @@ if page == "🏠 Overview":
     
     with col2:
         st.markdown("**✅ Data Quality**")
-    failed_checks = session.sql("""
-        SELECT COUNT(*) 
-        FROM data_quality_checks 
-        WHERE passed = FALSE 
-        AND check_timestamp > DATEADD(day, -7, CURRENT_TIMESTAMP())
-    """).collect()[0][0]
+        failed_checks = session.sql("""
+            SELECT COUNT(*) 
+            FROM data_quality_checks 
+            WHERE passed = FALSE 
+            AND check_timestamp > DATEADD(day, -7, CURRENT_TIMESTAMP())
+        """).collect()[0][0]
         
         st.metric("Failed Quality Checks (7 days)", failed_checks, delta=None, delta_color="inverse")
 
