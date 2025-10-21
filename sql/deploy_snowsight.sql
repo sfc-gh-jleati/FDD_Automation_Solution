@@ -370,9 +370,10 @@ CREATE TABLE IF NOT EXISTS ai_insights (
     -- Metadata
     is_reviewed BOOLEAN DEFAULT FALSE,
     reviewed_by VARCHAR(100),
-    reviewed_timestamp TIMESTAMP_NTZ,
+    reviewed_timestamp TIMESTAMP_NTZ
     
-    CONSTRAINT fk_ai_deal FOREIGN KEY (deal_id) REFERENCES trial_balance_raw(deal_id)
+    -- Foreign key constraint removed for deployment flexibility
+    -- In production, enforce referential integrity via application logic or triggers
 );
 
 -- ============================================================================
