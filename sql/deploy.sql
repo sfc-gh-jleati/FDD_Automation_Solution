@@ -57,22 +57,27 @@ CREATE SCHEMA IF NOT EXISTS IDENTIFIER($SCHEMA_NAME)
 USE SCHEMA IDENTIFIER($SCHEMA_NAME);
 
 -- Create warehouse with auto-scaling
--- Note: IDENTIFIER() not supported for warehouses, use session variable with concatenation
-SET WAREHOUSE_DDL = 
-    'CREATE WAREHOUSE IF NOT EXISTS ' || $WAREHOUSE_NAME || 
-    ' WAREHOUSE_SIZE = ' || $WAREHOUSE_SIZE ||
-    ' AUTO_SUSPEND = ' || $AUTO_SUSPEND_SECONDS ||
-    ' AUTO_RESUME = TRUE' ||
-    ' MIN_CLUSTER_COUNT = 1' ||
-    ' MAX_CLUSTER_COUNT = 3' ||
-    ' SCALING_POLICY = ''STANDARD''' ||
-    ' INITIALLY_SUSPENDED = FALSE' ||
-    ' COMMENT = ''Warehouse for FDD data processing and AI analysis''';
-
-EXECUTE IMMEDIATE $WAREHOUSE_DDL;
-
-SET USE_WAREHOUSE_STMT = 'USE WAREHOUSE ' || $WAREHOUSE_NAME;
-EXECUTE IMMEDIATE $USE_WAREHOUSE_STMT;
+-- Note: Use anonymous block with local variables to avoid 256-byte session variable limit
+EXECUTE IMMEDIATE $$
+DECLARE
+    warehouse_ddl VARCHAR;
+BEGIN
+    warehouse_ddl := 
+        'CREATE WAREHOUSE IF NOT EXISTS ' || $WAREHOUSE_NAME || 
+        ' WAREHOUSE_SIZE = ' || $WAREHOUSE_SIZE ||
+        ' AUTO_SUSPEND = ' || $AUTO_SUSPEND_SECONDS ||
+        ' AUTO_RESUME = TRUE' ||
+        ' MIN_CLUSTER_COUNT = 1' ||
+        ' MAX_CLUSTER_COUNT = 3' ||
+        ' SCALING_POLICY = ''STANDARD''' ||
+        ' INITIALLY_SUSPENDED = FALSE' ||
+        ' COMMENT = ''Warehouse for FDD data processing and AI analysis''';
+    
+    EXECUTE IMMEDIATE :warehouse_ddl;
+    
+    EXECUTE IMMEDIATE 'USE WAREHOUSE ' || $WAREHOUSE_NAME;
+END;
+$$;
 
 -- Record deployment in schema migrations
 CREATE TABLE IF NOT EXISTS schema_migrations (
