@@ -1413,11 +1413,12 @@ SELECT 'Core data procedures created successfully' AS status;
 
 CREATE OR REPLACE VIEW v_database_tab_pivoted AS
 WITH last_n_periods AS (
-    -- Get the most recent N distinct periods (configured)
+    -- Get the most recent 24 distinct periods (max configured in system_config)
+    -- Note: LIMIT does not support subqueries in Snowflake, must be a constant
     SELECT DISTINCT period_date
     FROM trial_balance_raw
     ORDER BY period_date DESC
-    LIMIT (SELECT get_config_number('max_pivot_periods'))
+    LIMIT 24
 ),
 ranked_periods AS (
     -- Rank from oldest (1) to newest (N)
