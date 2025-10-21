@@ -193,12 +193,12 @@ if page == "🏠 Overview":
     
     with col2:
         st.markdown("**✅ Data Quality**")
-        failed_checks = session.sql("""
-            SELECT COUNT(*) 
-            FROM data_quality_checks 
-            WHERE passed = FALSE 
-            AND created_at > DATEADD(day, -7, CURRENT_TIMESTAMP())
-        """).collect()[0][0]
+    failed_checks = session.sql("""
+        SELECT COUNT(*) 
+        FROM data_quality_checks 
+        WHERE passed = FALSE 
+        AND check_timestamp > DATEADD(day, -7, CURRENT_TIMESTAMP())
+    """).collect()[0][0]
         
         st.metric("Failed Quality Checks (7 days)", failed_checks, delta=None, delta_color="inverse")
 
@@ -302,7 +302,7 @@ elif page == "⚙️ Configuration Management":
             config_value::VARCHAR AS config_value,
             description,
             is_sensitive,
-            updated_at
+            last_updated
         FROM system_config
         ORDER BY config_key
     """).to_pandas()
@@ -380,7 +380,7 @@ elif page == "⚙️ Configuration Management":
                 update_sql = f"""
                     UPDATE system_config
                     SET config_value = {value_sql},
-                        updated_at = CURRENT_TIMESTAMP()
+                        last_updated = CURRENT_TIMESTAMP()
                     WHERE config_key = '{selected_config}'
                 """
                 session.sql(update_sql).collect()
@@ -465,14 +465,14 @@ elif page == "🎯 AI Threshold Tuning":
                 session.sql(f"""
                     UPDATE system_config
                     SET config_value = TO_VARIANT({new_threshold}),
-                        updated_at = CURRENT_TIMESTAMP()
+                        last_updated = CURRENT_TIMESTAMP()
                     WHERE config_key = 'variance_threshold_pct'
                 """).collect()
                 
                 session.sql(f"""
                     UPDATE system_config
                     SET config_value = TO_VARIANT({new_min_amount}),
-                        updated_at = CURRENT_TIMESTAMP()
+                        last_updated = CURRENT_TIMESTAMP()
                     WHERE config_key = 'min_variance_amount'
                 """).collect()
                 
@@ -513,14 +513,14 @@ elif page == "🎯 AI Threshold Tuning":
                 session.sql(f"""
                     UPDATE system_config
                     SET config_value = TO_VARIANT('"{new_model}"'),
-                        updated_at = CURRENT_TIMESTAMP()
+                        last_updated = CURRENT_TIMESTAMP()
                     WHERE config_key = 'ai_model_variance'
                 """).collect()
                 
                 session.sql(f"""
                     UPDATE system_config
                     SET config_value = TO_VARIANT({new_max_insights}),
-                        updated_at = CURRENT_TIMESTAMP()
+                        last_updated = CURRENT_TIMESTAMP()
                     WHERE config_key = 'max_ai_insights'
                 """).collect()
                 
@@ -640,10 +640,10 @@ elif page == "✅ Data Quality Dashboard":
             check_type,
             severity,
             message,
-            TO_CHAR(created_at, 'YYYY-MM-DD HH24:MI:SS') AS checked_at
+            TO_CHAR(check_timestamp, 'YYYY-MM-DD HH24:MI:SS') AS checked_at
         FROM data_quality_checks
         WHERE passed = FALSE
-        ORDER BY created_at DESC
+        ORDER BY check_timestamp DESC
         LIMIT 50
     """).to_pandas()
     
@@ -670,12 +670,16 @@ elif page == "📁 Stage File Management":
         files_df = session.sql(files_query).to_pandas()
         
         if not files_df.empty:
-            # Format file sizes
-            files_df['size_kb'] = (files_df['size'] / 1024).round(2)
-            files_df['size_mb'] = (files_df['size'] / 1024 / 1024).round(2)
+            # Format file sizes (Snowflake returns uppercase column names)
+            size_col = 'size' if 'size' in files_df.columns else 'SIZE'
+            name_col = 'name' if 'name' in files_df.columns else 'NAME'
+            modified_col = 'last_modified' if 'last_modified' in files_df.columns else 'LAST_MODIFIED'
+            
+            files_df['size_kb'] = (files_df[size_col] / 1024).round(2)
+            files_df['size_mb'] = (files_df[size_col] / 1024 / 1024).round(2)
             
             # Display file list
-            st.dataframe(files_df[['name', 'size', 'size_kb', 'last_modified']], 
+            st.dataframe(files_df[[name_col, size_col, 'size_kb', modified_col]], 
                         use_container_width=True, hide_index=True)
             
             # Statistics
@@ -693,7 +697,7 @@ elif page == "📁 Stage File Management":
             col1, col2 = st.columns([2, 1])
             
             with col1:
-                file_to_remove = st.selectbox("Select File to Remove", files_df['name'].tolist())
+                file_to_remove = st.selectbox("Select File to Remove", files_df[name_col].tolist())
             
             with col2:
                 st.markdown("##")  # Spacing
@@ -883,9 +887,9 @@ elif page == "🚨 Error Diagnostics":
             error_type,
             error_message,
             line_content,
-            TO_CHAR(created_at, 'YYYY-MM-DD HH24:MI:SS') AS error_time
+            TO_CHAR(error_timestamp, 'YYYY-MM-DD HH24:MI:SS') AS error_time
         FROM load_errors
-        ORDER BY created_at DESC
+        ORDER BY error_timestamp DESC
         LIMIT 100
     """).to_pandas()
     
