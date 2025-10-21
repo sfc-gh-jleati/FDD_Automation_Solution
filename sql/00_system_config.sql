@@ -55,8 +55,7 @@ VALUES
     -- Environment
     ('environment', 'DEVELOPMENT', 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', FALSE),
     ('schema_version', '1.0.0', 'Current schema version', FALSE),
-    ('deployment_date', CURRENT_TIMESTAMP(), 'Date of last deployment', FALSE)
-ON CONFLICT (config_key) DO NOTHING;
+    ('deployment_date', CURRENT_TIMESTAMP(), 'Date of last deployment', FALSE);
 
 -- Helper function to get config values
 CREATE OR REPLACE FUNCTION get_config(key_name VARCHAR)
@@ -140,4 +139,5 @@ FROM system_config
 ORDER BY config_key;
 
 SELECT 'System configuration initialized' AS status;
+
 
