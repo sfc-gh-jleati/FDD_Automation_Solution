@@ -1986,7 +1986,7 @@ BEGIN
     output_path := '@' || get_config_string('output_stage_name') || '/database_tab_' || :safe_deal_id || '.csv';
     
     -- Export using EXECUTE IMMEDIATE (COPY INTO doesn't support variable paths)
-    LET copy_sql := 'COPY INTO ' || :output_path || 
+    copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT * FROM v_database_tab_pivoted WHERE deal_id = ''' || :safe_deal_id || ''') ' ||
                     ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
@@ -2047,7 +2047,7 @@ BEGIN
     
     output_path := '@' || get_config_string('output_stage_name') || '/income_statement_' || :safe_deal_id || '.csv';
     
-    LET copy_sql := 'COPY INTO ' || :output_path || 
+    copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT row_num, row_label, row_type, account_filter, row_format_json FROM temp_is_schedule ORDER BY row_num) ' ||
                     ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
@@ -2105,7 +2105,7 @@ BEGIN
     
     output_path := '@' || get_config_string('output_stage_name') || '/balance_sheet_' || :safe_deal_id || '.csv';
     
-    LET copy_sql := 'COPY INTO ' || :output_path || 
+    copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT row_num, row_label, row_type, account_filter, row_format_json FROM temp_bs_schedule ORDER BY row_num) ' ||
                     ' FILE_FORMAT = (FORMAT_NAME = ''csv_format'') ' ||
                     ' HEADER = TRUE OVERWRITE = TRUE SINGLE = TRUE';
@@ -2162,7 +2162,7 @@ BEGIN
     
     output_path := '@' || get_config_string('output_stage_name') || '/ai_insights_' || :safe_deal_id || '.csv';
     
-    LET copy_sql := 'COPY INTO ' || :output_path || 
+    copy_sql := 'COPY INTO ' || :output_path || 
                     ' FROM (SELECT insight_type, severity, COALESCE(account_name, ''General'') AS account_name, ' ||
                     ' TO_CHAR(period_date, ''Mon YYYY'') AS period, metric_value, comparison_value, variance_pct, ' ||
                     ' insight_text, suggested_question, model_used FROM ai_insights WHERE deal_id = ''' || :safe_deal_id || ''' ' ||
