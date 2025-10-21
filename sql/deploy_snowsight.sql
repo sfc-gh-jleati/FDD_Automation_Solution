@@ -1860,9 +1860,9 @@ BEGIN
         variance_data.net_amount,
         variance_data.prior_net_amount,
         variance_data.var_pct,
-        -- Use Cortex AI to generate insights
+        -- Use Cortex AI to generate insights (model must be literal string per Snowflake Cortex requirements)
         SNOWFLAKE.CORTEX.COMPLETE(
-            :ai_model,
+            'mistral-large',
             'Analyze this financial variance for a due diligence review: Account "' || variance_data.account_name || 
             '" changed from $' || TO_CHAR(ABS(variance_data.prior_net_amount), '999,999,999') || 
             ' to $' || TO_CHAR(ABS(variance_data.net_amount), '999,999,999') || 
@@ -1872,7 +1872,7 @@ BEGIN
         ),
         'Why did ' || variance_data.account_name || ' change by ' || ROUND(ABS(variance_data.var_pct), 1) || '% from ' ||
         TO_CHAR(variance_data.prior_period_date, 'Mon YYYY') || ' to ' || TO_CHAR(variance_data.period_date, 'Mon YYYY') || '?',
-        :ai_model,
+        'mistral-large',
         NULL,  -- Token counts would need to be calculated separately
         NULL
     FROM (
