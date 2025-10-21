@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS system_config (
     config_key VARCHAR(100) PRIMARY KEY,
     config_value VARIANT NOT NULL,
     description VARCHAR(500),
-    is_sensitive BOOLEAN DEFAULT FALSE,
+    is_sensitive BOOLEAN DEFAULT false,
     last_updated TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
     updated_by VARCHAR(100) DEFAULT CURRENT_USER()
 );
@@ -126,42 +126,42 @@ CREATE TABLE IF NOT EXISTS system_config (
 INSERT INTO system_config (config_key, config_value, description, is_sensitive)
 VALUES
     -- Data Quality Thresholds
-    ('balance_tolerance_dollars', 0.10, 'Acceptable rounding difference for trial balance validation (in dollars)', FALSE),
-    ('min_variance_amount', 5000.00, 'Minimum dollar amount to trigger variance analysis', FALSE),
-    ('variance_threshold_pct', 0.20, 'Minimum percentage change to flag as variance (0.20 = 20%)', FALSE),
-    ('max_error_rate_pct', 0.05, 'Maximum acceptable error rate for data loads (0.05 = 5%)', FALSE),
+    ('balance_tolerance_dollars', TO_VARIANT(0.10), 'Acceptable rounding difference for trial balance validation (in dollars)', false),
+    ('min_variance_amount', TO_VARIANT(5000.00), 'Minimum dollar amount to trigger variance analysis', false),
+    ('variance_threshold_pct', TO_VARIANT(0.20), 'Minimum percentage change to flag as variance (0.20 = 20%)', false),
+    ('max_error_rate_pct', TO_VARIANT(0.05), 'Maximum acceptable error rate for data loads (0.05 = 5%)', false),
     
     -- AI Configuration
-    ('max_ai_insights', 15, 'Maximum number of AI insights to generate per deal', FALSE),
-    ('ai_model_variance', 'claude-4-sonnet', 'AI model for variance analysis', FALSE),
-    ('ai_model_trends', 'claude-4-sonnet', 'AI model for trend analysis', FALSE),
-    ('ai_batch_size', 50, 'Number of variance records to process in single AI batch', FALSE),
+    ('max_ai_insights', TO_VARIANT(15), 'Maximum number of AI insights to generate per deal', false),
+    ('ai_model_variance', TO_VARIANT('claude-4-sonnet'), 'AI model for variance analysis', false),
+    ('ai_model_trends', TO_VARIANT('claude-4-sonnet'), 'AI model for trend analysis', false),
+    ('ai_batch_size', TO_VARIANT(50), 'Number of variance records to process in single AI batch', false),
     
     -- Performance & Scaling
-    ('warehouse_size_default', 'SMALL', 'Default warehouse size for processing', FALSE),
-    ('warehouse_auto_suspend', 60, 'Auto-suspend timeout in seconds', FALSE),
-    ('max_pivot_periods', 24, 'Maximum number of periods in pivoted views', FALSE),
-    ('query_timeout_seconds', 3600, 'Maximum query execution time (1 hour)', FALSE),
+    ('warehouse_size_default', TO_VARIANT('SMALL'), 'Default warehouse size for processing', false),
+    ('warehouse_auto_suspend', TO_VARIANT(60), 'Auto-suspend timeout in seconds', false),
+    ('max_pivot_periods', TO_VARIANT(24), 'Maximum number of periods in pivoted views', false),
+    ('query_timeout_seconds', TO_VARIANT(3600), 'Maximum query execution time (1 hour)', false),
     
     -- File Management
-    ('input_stage_name', 'fdd_input_stage', 'Name of input file stage', FALSE),
-    ('output_stage_name', 'fdd_output_stage', 'Name of output file stage', FALSE),
-    ('default_file_format', 'csv_format', 'Default file format for imports/exports', FALSE),
+    ('input_stage_name', TO_VARIANT('fdd_input_stage'), 'Name of input file stage', false),
+    ('output_stage_name', TO_VARIANT('fdd_output_stage'), 'Name of output file stage', false),
+    ('default_file_format', TO_VARIANT('csv_format'), 'Default file format for imports/exports', false),
     
     -- Audit & Retention
-    ('audit_retention_days', 90, 'Number of days to retain audit logs', FALSE),
-    ('error_log_retention_days', 180, 'Number of days to retain error logs', FALSE),
-    ('output_retention_days', 30, 'Number of days to retain output files in stage', FALSE),
+    ('audit_retention_days', TO_VARIANT(90), 'Number of days to retain audit logs', false),
+    ('error_log_retention_days', TO_VARIANT(180), 'Number of days to retain error logs', false),
+    ('output_retention_days', TO_VARIANT(30), 'Number of days to retain output files in stage', false),
     
     -- Security
-    ('deal_id_validation_regex', '^[A-Z0-9_-]+$', 'Regex pattern for validating deal_id format', FALSE),
-    ('max_deal_id_length', 50, 'Maximum length for deal_id', FALSE),
-    ('enable_row_level_security', TRUE, 'Enable row-level security policies', FALSE),
+    ('deal_id_validation_regex', TO_VARIANT('^[A-Z0-9_-]+$'), 'Regex pattern for validating deal_id format', false),
+    ('max_deal_id_length', TO_VARIANT(50), 'Maximum length for deal_id', false),
+    ('enable_row_level_security', TO_VARIANT(true), 'Enable row-level security policies', false),
     
     -- Environment
-    ('environment', 'DEVELOPMENT', 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', FALSE),
-    ('schema_version', '1.0.0', 'Current schema version', FALSE),
-    ('deployment_date', CURRENT_TIMESTAMP(), 'Date of last deployment', FALSE);
+    ('environment', TO_VARIANT('DEVELOPMENT'), 'Current environment: DEVELOPMENT, STAGING, PRODUCTION', false),
+    ('schema_version', TO_VARIANT('1.0.0'), 'Current schema version', false),
+    ('deployment_date', TO_VARIANT(CURRENT_TIMESTAMP()), 'Date of last deployment', false);
 
 -- Helper function to get config values
 CREATE OR REPLACE FUNCTION get_config(key_name VARCHAR)
