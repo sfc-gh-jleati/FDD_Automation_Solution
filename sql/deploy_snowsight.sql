@@ -2274,10 +2274,10 @@ BEGIN
         duration_seconds = DATEDIFF(second, :start_time_var, CURRENT_TIMESTAMP()),
         status = 'SUCCESS',
         rows_affected = :tb_row_count,
-        message = result
+        message = :result
     WHERE log_id = :log_id_var;
     
-    RETURN 'SUCCESS: ' || result || '. Outputs available at @' || get_config_string('output_stage_name') || '/*_' || :safe_deal_id || '.csv';
+    RETURN 'SUCCESS: ' || :result || '. Outputs available at @' || get_config_string('output_stage_name') || '/*_' || :safe_deal_id || '.csv';
     
 EXCEPTION
     WHEN OTHER THEN
