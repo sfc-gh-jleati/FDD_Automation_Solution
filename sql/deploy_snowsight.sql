@@ -122,6 +122,9 @@ CREATE TABLE IF NOT EXISTS system_config (
     updated_by VARCHAR(100) DEFAULT CURRENT_USER()
 );
 
+-- Clear existing configuration (for idempotent deployments)
+TRUNCATE TABLE IF EXISTS system_config;
+
 -- Insert default configuration values using SELECT to support TO_VARIANT
 -- Note: All values as strings to avoid type inference issues, TO_VARIANT will parse correctly
 INSERT INTO system_config (config_key, config_value, description, is_sensitive)
@@ -1968,6 +1971,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
     error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate and sanitize deal_id
@@ -2030,6 +2034,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
     error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     -- Validate and sanitize deal_id
@@ -2089,6 +2094,7 @@ DECLARE
     output_path VARCHAR;
     safe_deal_id VARCHAR;
     file_count NUMBER;
+    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
     error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
     safe_deal_id := sanitize_deal_id(:deal_id_param);
@@ -2208,6 +2214,7 @@ DECLARE
     result VARCHAR;
     tb_row_count NUMBER;
     insight_count NUMBER;
+    copy_sql VARCHAR;  -- For dynamic COPY INTO statement
     safe_deal_id VARCHAR;
     error_msg VARCHAR;  -- For capturing SQLERRM in EXCEPTION block
 BEGIN
