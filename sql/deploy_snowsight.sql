@@ -1138,7 +1138,7 @@ END;
 $$;
 
 CREATE OR REPLACE PROCEDURE load_account_mappings(
-    file_name VARCHAR DEFAULT '02_sample_trial_balance_24mo.csv',
+    file_name VARCHAR DEFAULT '02_sample_account_mappings_24mo.csv',
     deal_id_filter VARCHAR DEFAULT NULL
 )
 RETURNS TABLE(status VARCHAR, rows_loaded NUMBER, message VARCHAR)
